@@ -39,17 +39,17 @@
                     const container = document.getElementById("news-container");
                     container.innerHTML = "";
 
-                    // Neueste zuerst
+                    // Neueste zuerst sortieren
                     news.sort((a, b) => new Date(b.date) - new Date(a.date));
 
                     news.forEach(n => {
                         container.innerHTML += `
             <article class="card">
-              <div class="small muted">${n.type} • ${n.date}</div>
-              <h3 style="margin:.5rem 0">${n.title}</h3>
-              <p class="small muted">${n.text}</p>
+                <div class="small muted">${n.type} • ${n.date}</div>
+                <h3 style="margin:.5rem 0">${n.title}</h3>
+                <p class="small muted">${n.text}</p>
             </article>
-          `;
+            `;
                     });
                 })
                 .catch(err => {

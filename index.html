@@ -70,35 +70,39 @@
             </div>
         </div>
     </div>
-</section>
 
-<!-- News (unter der Slideshow) -->
-<section id="news">
-    <div class="container">
-        <h2 class="section__title">Aktuelle News</h2>
+    <section id="news">
+        <div class="container">
+            <h2 class="section__title">Aktuelle News</h2>
 
-        <div class="grid grid-3">
+            <div class="grid grid-3" id="news-container"></div>
 
+            <script>
+                fetch("news.json")
+                    .then(r => r.json())
+                    .then(news => {
+                        const container = document.getElementById("news-container");
+                        container.innerHTML = "";
+
+                        // Neueste zuerst sortieren
+                        news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                        news.forEach(n => {
+                            container.innerHTML += `
             <article class="card">
-                <div class="small muted">Devblog • 17.01.2026</div>
-                <h3 style="margin:.5rem 0">Plugin & coden</h3>
-                <p class="small muted">Neue Lobby system.</p>
+                <div class="small muted">${n.type} • ${n.date}</div>
+                <h3 style="margin:.5rem 0">${n.title}</h3>
+                <p class="small muted">${n.text}</p>
             </article>
-
-            <article class="card">
-                <div class="small muted">Devblog • 17.01.2026</div>
-                <h3 style="margin:.5rem 0">Plugin & coden</h3>
-                <p class="small muted">Update auf Java 25</p>
-            </article>
-
-            <article class="card">
-                <div class="small muted">Event • 17.01.2026</div>
-                <h3 style="margin:.5rem 0">Nächste Event</h3>
-                <p class="small muted">Es wurde fertig gecode.</p>
-            </article>
-
+            `;
+                        });
+                    })
+                    .catch(err => {
+                        console.error("Fehler beim Laden der News:", err);
+                    });
+            </script>
         </div>
-    </div>
+    </section>
 
 <!-- Shop (unter News) -->
   <section id="shop">
