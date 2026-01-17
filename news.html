@@ -30,27 +30,32 @@
     <div class="container">
         <h2 class="section__title">Aktuelle News</h2>
 
-        <div class="grid grid-3">
+        <div class="grid grid-3" id="news-container"></div>
 
+        <script>
+            fetch("news.json")
+                .then(r => r.json())
+                .then(news => {
+                    const container = document.getElementById("news-container");
+                    container.innerHTML = "";
+
+                    // Neueste zuerst
+                    news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                    news.forEach(n => {
+                        container.innerHTML += `
             <article class="card">
-                <div class="small muted">Event • 15.12.2025</div>
-                <h3 style="margin:.5rem 0">Winter-Lobby & Aufgaben</h3>
-                <p class="small muted">Sammle Geschenke und schalte Kosmetika frei.</p>
+              <div class="small muted">${n.type} • ${n.date}</div>
+              <h3 style="margin:.5rem 0">${n.title}</h3>
+              <p class="small muted">${n.text}</p>
             </article>
-
-            <article class="card">
-                <div class="small muted">Update • 10.12.2025</div>
-                <h3 style="margin:.5rem 0">Skyblock Verbesserungen</h3>
-                <p class="small muted">Neue Quests und Performance-Optimierungen.</p>
-            </article>
-
-            <article class="card">
-                <div class="small muted">Devblog • 05.12.2025</div>
-                <h3 style="margin:.5rem 0">Monitoring & Status</h3>
-                <p class="small muted">Einblick in unser Status- und Cache-System.</p>
-            </article>
-
-        </div>
+          `;
+                    });
+                })
+                .catch(err => {
+                    console.error("Fehler beim Laden der News:", err);
+                });
+        </script>
     </div>
 </section>
 

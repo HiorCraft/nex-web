@@ -1,0 +1,20 @@
+[
+  {
+    "type": "Event",
+    "date": "2025-12-15",
+    "title": "Winter-Lobby & Aufgaben",
+    "text": "Sammle Geschenke und schalte Kosmetika frei."
+  },
+  {
+    "type": "Update",
+    "date": "2025-12-10",
+    "title": "Skyblock Verbesserungen",
+    "text": "Neue Quests und Performance-Optimierungen."
+  },
+  {
+    "type": "Devblog",
+    "date": "2025-12-05",
+    "title": "Monitoring & Status",
+    "text": "Einblick in unser Status- und Cache-System."
+  }
+]
