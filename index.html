@@ -110,5 +110,80 @@
     </div>
 </section>
 
+<!-- Shop (unter News) -->
+  <section id="shop">
+    <div class="container">
+      <h2 class="section__title">Shop</h2>
+      <div class="card">
+        <p class="small muted">Finde Ränge, Cosmetics und Bundles im Shop.</p>
+        <div style="height:.75rem"></div>
+        <a class="btn" href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener">Zum Shop</a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+  <div class="inline">
+    <span class="small">© 2025 Craftunity Netzwerk</span>
+    <span class="small">•</span>
+    <a class="small" href="Impressen/index">Impressum</a>
+    <span class="small">•</span>
+    <a class="small" href="#privacy">Datenschutz</a>
+  </div>
+
+  <script>
+    (function(){
+      const slidesEl = document.getElementById('slides');
+      const slides = Array.from(slidesEl.children);
+      const dotsEl = document.getElementById('dots');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let idx = 0, autoplay = true, interval = 4500, timer;
+
+      function renderDots(){
+        dotsEl.innerHTML = '';
+        slides.forEach((_, i) => {
+          const btn = document.createElement('button');
+          btn.className = 'dot-btn' + (i===idx? ' active':'');
+          btn.setAttribute('aria-label', 'Slide ' + (i+1));
+          btn.addEventListener('click', ()=> { go(i); });
+          dotsEl.appendChild(btn);
+        });
+      }
+
+      function update(){
+        slidesEl.style.transform = 'translateX(' + (-idx*100) + '%)';
+        Array.from(dotsEl.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
+      }
+
+      function go(i){
+        idx = (i + slides.length) % slides.length;
+        update();
+        restartAutoplay();
+      }
+
+      prev.addEventListener('click', ()=> go(idx-1));
+      next.addEventListener('click', ()=> go(idx+1));
+
+      function startAutoplay(){
+        if(!autoplay) return;
+        timer = setInterval(()=> go(idx+1), interval);
+      }
+      function restartAutoplay(){ clearInterval(timer); startAutoplay(); }
+
+      renderDots();
+      update();
+      startAutoplay();
+
+      const slideshow = document.querySelector('.slideshow');
+      slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
+      slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
+    })();
+  </script>
+</body>
+</html>
+
+
 
 
