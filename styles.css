@@ -276,3 +276,32 @@ section{padding:2rem 0}
     display: block;
 }
 
+.slideshow {
+    max-width: 1600px;
+}
+
+.slide img {
+    height: 520px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.team-head {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    image-rendering: pixelated;
+}
+
+
+
