@@ -230,3 +230,49 @@ section{padding:2rem 0}
 .button-box .btn:hover {
     background: #218838;       /* dunkleres Grün beim Hover */
 }
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+.rubine__image img {
+    max-width: 100%;
+    height: auto;
+}
+.rubine__text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.premium-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.premium-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.premium-image img {
+    max-width: 320px; /* Bildgröße anpassen */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.server__text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.server__image img {
+    max-width: 320px; /* Bildgröße anpassen */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
