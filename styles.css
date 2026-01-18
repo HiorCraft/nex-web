@@ -302,6 +302,35 @@ section{padding:2rem 0}
     border-radius: 6px;
     image-rendering: pixelated;
 }
+.github-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    transition: transform .2s ease;
+}
+
+.github-logo img:hover {
+    transform: scale(1.1);
+}
+
+.gh-inline {
+    display: inline-flex;
+    align-items: center;
+    margin-left: .35rem;
+}
+
+.gh-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.gh-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 
 
 
