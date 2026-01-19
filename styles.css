@@ -331,6 +331,59 @@ section{padding:2rem 0}
     transform: scale(1.1);
 }
 
+.brand__link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    display: none;
+    z-index: 90;
+}
+
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 450px;
+    display: none;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.popup-box.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-overlay.show {
+    display: block;
+}
+
+.popup-close {
+    margin-top: 1rem;
+    background: var(--border);
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 
 
 
