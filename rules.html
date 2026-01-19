@@ -115,6 +115,19 @@
         <div id="copy-toast">Server-IP kopiert!</div>
     </section>
 
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("mc.craftunitymc.de");
+
+            const toast = document.getElementById("copy-toast");
+            toast.classList.add("show");
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2500);
+        }
+    </script>
+
     <section id="premium">
         <div class="container premium-flex">
             <div class="premium-text">
