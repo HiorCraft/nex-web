@@ -108,81 +108,71 @@
         </div>
     </section>
 
-    <section id="rubine">
+    <section id="JoinUs">
         <div class="container flex-row">
-            <div class="rubine__image">
+            <div class="joinus__image">
                 <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
             </div>
 
-            <div class="rubine__text">
+            <div class="server__text">
                 <h2 class="section__title">Zeig, wer du bist</h2>
                 <p class="small muted">
-                    Tritt unserem Minecraft-Server bei und werde Teil einer lebendigen Community.
-                    Gleichgesinnte. Worauf wartest du noch? Dein nächstes Abenteuer wartet!
+                    Tritt dem Craftunity Netzwerk bei und erlebe spannende Abenteuer,
+                    baue beeindruckende Strukturen und knüpfe Freundschaften
+                    in einer lebendigen Community.
                 </p>
 
                 <div style="height:.75rem"></div>
 
-                <!-- Popup-Button -->
-                <a class="btn" onclick="openPopup()">Server Tutorial anzeigen</a>
+                <a class="btn" href="#" onclick="copyIP(); return false;">
+                    Join uns
+                </a>
             </div>
         </div>
+
+        <div id="copy-toast">Server-IP kopiert!</div>
     </section>
 
-    <!-- Overlay -->
-    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("mc.craftunitymc.de");
 
-    <!-- Popup Box -->
-    <div id="popup-box" class="popup-box">
-        <h2 class="section__title">So joinst du den Server</h2>
+            const toast = document.getElementById("copy-toast");
+            toast.classList.add("show");
 
-        <p class="small muted">
-            Das Beitreten ist super einfach! Öffne Minecraft, gehe ins Mehrspieler-Menü
-            und füge unseren Server hinzu. Schon kannst du Craftunity spielen.
-        </p>
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2500);
+        }
+    </script>
 
-        <p class="small muted">
-            Wir unterstützen Java & Bedrock. Folge einfach unserer Schritt‑für‑Schritt Anleitung.
-        </p>
-
-        <div style="height:.75rem"></div>
-
-        <a class="btn" href="tutorial.html">Zum vollständigen Tutorial</a>
-
-        <button class="popup-close" onclick="closePopup()">Schließen</button>
-    </div>
 
     <section id="premium">
         <div class="container premium-flex">
-
             <div class="premium-text">
                 <h2 class="section__title">Premium Rang</h2>
-
                 <p class="small muted">
                     Sichere dir exklusive Vorteile wie kosmetische Effekte, Prioritäts‑Queue,
                     besondere Lobby‑Features und mehr. Unterstütze das Netzwerk und hebe dich
                     von der Masse ab.
                 </p>
-
                 <div style="height:.75rem"></div>
                 <a class="btn" href="ranks.html" target="_blank" rel="noopener">
                     Zur Rangübersicht
                 </a>
             </div>
-
             <div class="premium-image">
                 <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
             </div>
-
         </div>
     </section>
+
 
     <section id="server">
         <div class="container flex-row">
             <div class="server__image">
                 <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
             </div>
-
             <div class="server__text">
                 <h2 class="section__title">Über uns</h2>
                 <p class="small muted">
@@ -266,17 +256,6 @@
       slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
     })();
   </script>
-      <script>
-          function openPopup() {
-              document.getElementById("popup-overlay").classList.add("show");
-              document.getElementById("popup-box").classList.add("show");
-          }
-
-          function closePopup() {
-              document.getElementById("popup-overlay").classList.remove("show");
-              document.getElementById("popup-box").classList.remove("show");
-          }
-      </script>
 </body>
 </html>
 
