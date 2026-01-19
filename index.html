@@ -12,14 +12,18 @@
 <header class="site-header">
     <div class="container nav">
         <div class="brand">
-            <a href="index.html" aria-label="Craftunity Netzwerk">
-                <span class="brand__logo"><img src="images/logo.png" alt="Craftunity Logo"></span>
-            </a>
-            <div class="brand__name">Craftunity Netzwerk</div>
+            <div class="brand">
+                <a href="index.html" aria-label="Craftunity Netzwerk" class="brand__link">
+        <span class="brand__logo">
+            <img src="images/logo.png" alt="Craftunity Logo">
+        </span>
+                    <div class="brand__name">Craftunity Netzwerk</div>
+                </a>
+            </div>
         </div>
 
         <nav class="menu" aria-label="Hauptnavigation">
-            <a href="index.html">Home</a>
+            <a href="rules.html">Rules</a>
             <a href="news.html">News</a>
             <a href="ranks.html">Ränge</a>
         </nav>
@@ -116,11 +120,37 @@
                     Tritt unserem Minecraft-Server bei und werde Teil einer lebendigen Community.
                     Gleichgesinnte. Worauf wartest du noch? Dein nächstes Abenteuer wartet!
                 </p>
+
                 <div style="height:.75rem"></div>
-                <a class="btn" href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener">Join auf den Server</a>
+
+                <!-- Popup-Button -->
+                <a class="btn" onclick="openPopup()">Server Tutorial anzeigen</a>
             </div>
         </div>
     </section>
+
+    <!-- Overlay -->
+    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+
+    <!-- Popup Box -->
+    <div id="popup-box" class="popup-box">
+        <h2 class="section__title">So joinst du den Server</h2>
+
+        <p class="small muted">
+            Das Beitreten ist super einfach! Öffne Minecraft, gehe ins Mehrspieler-Menü
+            und füge unseren Server hinzu. Schon kannst du Craftunity spielen.
+        </p>
+
+        <p class="small muted">
+            Wir unterstützen Java & Bedrock. Folge einfach unserer Schritt‑für‑Schritt Anleitung.
+        </p>
+
+        <div style="height:.75rem"></div>
+
+        <a class="btn" href="tutorial.html">Zum vollständigen Tutorial</a>
+
+        <button class="popup-close" onclick="closePopup()">Schließen</button>
+    </div>
 
     <section id="premium">
         <div class="container premium-flex">
@@ -236,6 +266,17 @@
       slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
     })();
   </script>
+      <script>
+          function openPopup() {
+              document.getElementById("popup-overlay").classList.add("show");
+              document.getElementById("popup-box").classList.add("show");
+          }
+
+          function closePopup() {
+              document.getElementById("popup-overlay").classList.remove("show");
+              document.getElementById("popup-box").classList.remove("show");
+          }
+      </script>
 </body>
 </html>
 
