@@ -1,20 +1,20 @@
 [
   {
     "type": "Event",
-    "date": "2025-12-15",
-    "title": "Winter-Lobby & Aufgaben",
-    "text": "Sammle Geschenke und schalte Kosmetika frei."
+    "date": "2026-01-10",
+    "title": "Nächste Stream Event",
+    "text": "Ist bald wieder soweit! Meldet euch an."
   },
   {
     "type": "Update",
-    "date": "2025-12-10",
-    "title": "Skyblock Verbesserungen",
-    "text": "Neue Quests und Performance-Optimierungen."
+    "date": "2026-01-18",
+    "title": "Lobby-Update",
+    "text": "Neue Lobby mit neue Möglichkeiten."
   },
   {
     "type": "Devblog",
-    "date": "2025-12-05",
-    "title": "Monitoring & Status",
-    "text": "Einblick in unser Status- und Cache-System."
+    "date": "2026-01-17",
+    "title": "Plugin & coden",
+    "text": "Nexo ist auf den Servern aktiv."
   }
 ]
