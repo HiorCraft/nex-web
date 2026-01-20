@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> //Bild im Tab hinzufügt
     <title>Community – Craftunity Netzwerk</title>
 
-    <!-- ausgelagertes CSS -->
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <nav class="menu" aria-label="Hauptnavigation">
+        <nav class="menu" aria-label="Hauptnavigation"> //Neue Navigation
             <a href="rules.html">Rules</a>
             <a href="news.html">News</a>
             <a href="ranks.html">Ränge</a>
@@ -30,8 +30,8 @@
     </div>
 </header>
 
-<!-- Slideshow (erste Sektion) -->
-<section id="gallery">
+
+<section id="gallery"> // Bilder und Slideshow richtig machen und
     <div class="container">
 
         <div class="slideshow" aria-roledescription="carousel">
@@ -39,8 +39,8 @@
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="1 von 3">
                     <img src="images/shot1.webp" alt="Parkour-Rennen">
                     <div class="slide__caption">
-                        <h3>Parkour-Rennen</h3>
-                        <p>Kurz: schnelle Runden mit Ranglisten und Belohnungen.</p>
+                        <h3>Smash</h3>
+                        <p>Kurz: Hab spaß mit deine Freunde mit paar runden Smash</p>
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@
 
     <section id="news">
         <div class="container">
-            <h2 class="section__title">Aktuelle News</h2>
+            <h2 class="section__title">Aktuelle News</h2> //API zum laden der News benutzt
 
             <div class="grid grid-3" id="news-container"></div>
 
@@ -88,7 +88,7 @@
                         const container = document.getElementById("news-container");
                         container.innerHTML = "";
 
-                        // Neueste zuerst sortieren
+
                         news.sort((a, b) => new Date(b.date) - new Date(a.date));
 
                         news.forEach(n => {
@@ -107,6 +107,8 @@
             </script>
         </div>
     </section>
+
+    // Die Bilder und Texte für die Sektionen anpassen
 
     <section id="JoinUs">
         <div class="container flex-row">
@@ -152,9 +154,8 @@
             <div class="premium-text">
                 <h2 class="section__title">Premium Rang</h2>
                 <p class="small muted">
-                    Sichere dir exklusive Vorteile wie kosmetische Effekte, Prioritäts‑Queue,
-                    besondere Lobby‑Features und mehr. Unterstütze das Netzwerk und hebe dich
-                    von der Masse ab.
+                    Sichere dir jetzt Premium und habe mehr spaß mit deine Freunde.
+                    Mit Tollen Vorteile zum beispiele Prioritäts‑Queue und Unterstütze uns für weitere Feats!
                 </p>
                 <div style="height:.75rem"></div>
                 <a class="btn" href="ranks.html" target="_blank" rel="noopener">
@@ -177,8 +178,7 @@
                 <h2 class="section__title">Über uns</h2>
                 <p class="small muted">
                     Erfahre mehr über das Team und die Geschichte hinter dem Craftunity Netzwerk.
-                    Unsere Mission ist es, eine freundliche und spannende Umgebung für alle
-                    Spieler zu schaffen.
+                    Wie es bist Jetzt geschaft haben, den Server zu Treiben.
                 </p>
                 <div style="height:.75rem"></div>
                 <a class="btn" href="server.html" target="_blank" rel="noopener">Mehr erfahren</a>
@@ -186,7 +186,7 @@
         </div>
     </section>
 
-    <section id="discord-cta">
+    <section id="discord-cta"> //Bild machen
         <div class="container">
             <div class="discord-card" role="region" aria-label="Discord">
                 <div>
@@ -198,7 +198,7 @@
         </div>
     </section>
 
-  <footer class="footer">
+  <footer class="footer"> //Footer anpassen und mehr Links hinzufügen das man zu alls Seiten kommt
   <div class="inline">
     <span class="small">© 2026 Craftunity Netzwerk</span>
     <span class="small">•</span>

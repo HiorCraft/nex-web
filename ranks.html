@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
+
   <header class="site-header">
     <div class="container nav">
       <div class="brand">
@@ -30,17 +30,16 @@
   </header>
   
   <section class="container">
-  <!-- Überschrift als Box -->
   <div class="heading-box">
     <h1 class="section__title"> Rank Überblick</h1>
   </div>
 
-  <!-- Tabelle -->
   <div style="overflow-x:auto">
     <table class="rank-table">
-      <!-- deine Tabelle hier -->
     </table>
   </div>
+
+ //Die Tabelle neu Machen und mehr Benefits hinzufügt
 
   <div style="overflow-x:auto">
     <table class="rank-table">
@@ -60,7 +59,7 @@
           <td><img src="images/nautical_member_rank.png" alt="Member Icon" class="rank-icon"></td>
           <td><img src="images/nautical_premium_rank.png" alt="Premium Icon" class="rank-icon"></td>
           <td><img src="images/nautical_premium+_rank.png" alt="Premium+ Icon" class="rank-icon"></td>
-          <td><img src="images/nautical_content_rank.png" alt="Content Icon" class="rank-icon"></td>
+          <td><img src="images/nautical_content_rank.png" alt="Content Icon" class="rank-icon"></td>   //Neues Icon für Content Rank
           <td><img src="images/nautical_VIP_rank.png" alt="VIP Icon" class="rank-icon"></td>
         </tr>
         <tr>
@@ -132,7 +131,7 @@
   </div>
   </section>
 
-    <!-- Discord (unter Shop) -->
+
   <section id="discord-cta">
     <div class="container">
       <div class="discord-card" role="region" aria-label="Discord">
@@ -155,55 +154,5 @@
     <span class="small">•</span>
     <a class="small" href="privacy.html">Datenschutz</a>
   </div>
-
-  <script>
-    (function(){
-      const slidesEl = document.getElementById('slides');
-      const slides = Array.from(slidesEl.children);
-      const dotsEl = document.getElementById('dots');
-      const prev = document.getElementById('prev');
-      const next = document.getElementById('next');
-      let idx = 0, autoplay = true, interval = 4500, timer;
-
-      function renderDots(){
-        dotsEl.innerHTML = '';
-        slides.forEach((_, i) => {
-          const btn = document.createElement('button');
-          btn.className = 'dot-btn' + (i===idx? ' active':'');
-          btn.setAttribute('aria-label', 'Slide ' + (i+1));
-          btn.addEventListener('click', ()=> { go(i); });
-          dotsEl.appendChild(btn);
-        });
-      }
-
-      function update(){
-        slidesEl.style.transform = 'translateX(' + (-idx*100) + '%)';
-        Array.from(dotsEl.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
-      }
-
-      function go(i){
-        idx = (i + slides.length) % slides.length;
-        update();
-        restartAutoplay();
-      }
-
-      prev.addEventListener('click', ()=> go(idx-1));
-      next.addEventListener('click', ()=> go(idx+1));
-
-      function startAutoplay(){
-        if(!autoplay) return;
-        timer = setInterval(()=> go(idx+1), interval);
-      }
-      function restartAutoplay(){ clearInterval(timer); startAutoplay(); }
-
-      renderDots();
-      update();
-      startAutoplay();
-
-      const slideshow = document.querySelector('.slideshow');
-      slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
-      slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
-    })();
-  </script>
 </body>
 </html>
