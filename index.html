@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> //Bild im Tab hinzufügt
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>Community – Craftunity Netzwerk</title>
 
 
@@ -22,10 +23,10 @@
             </div>
         </div>
 
-        <nav class="menu" aria-label="Hauptnavigation"> //Neue Navigation
-            <a href="rules.html">Rules</a>
-            <a href="news.html">News</a>
-            <a href="ranks.html">Ränge</a>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="ranks.html" class="nav-link">Ränge</a>
         </nav>
     </div>
 </header>
@@ -186,28 +187,72 @@
         </div>
     </section>
 
-    <section id="discord-cta"> //Bild machen
+    //Bild für Dc
+
+    <section id="discord-cta">
         <div class="container">
             <div class="discord-card" role="region" aria-label="Discord">
                 <div>
                     <h3>Tritt unserem Discord bei</h3>
                     <p class="small">Sei Teil der Community, erhalte Support und Event‑Ankündigungen.</p>
                 </div>
-                <a class="btn btn--discord" id="discord" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">Discord beitreten</a>
+
+                <a class="btn btn--discord" id="discord"
+                   href="https://discord.gg/cU8tt3QsUp"
+                   target="_blank" rel="noopener">
+                    Discord beitreten
+                </a>
+            </div>
+
+            <!-- Eigene Online-Anzeige -->
+            <div class="discord-online-box">
+                <span class="dot"></span>
+                <span id="discord-online">Lädt...</span>
             </div>
         </div>
     </section>
 
-  <footer class="footer"> //Footer anpassen und mehr Links hinzufügen das man zu alls Seiten kommt
-  <div class="inline">
-    <span class="small">© 2026 Craftunity Netzwerk</span>
-    <span class="small">•</span>
-    <a class="small" href="impressum.html">Impressum</a>
-    <span class="small">•</span>
-    <a class="small" href="privacy.html">Datenschutz</a>
-  </div>
+    <footer id="footer">
+        <div class="container footer-grid">
 
-  <script>
+            <!-- Navigation -->
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="server.html">Server</a></li>
+                    <li><a href="ranks.html">Ränge</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="rules.html">Regeln</a></li>
+                </ul>
+            </div>
+
+            <!-- Kontakt -->
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li>Email: <a href="mailto:support@craftunity.net">support@craftunity.net</a></li>
+                    <li>Discord: <a href="https://discord.gg/cU8tt3QsUp" target="_blank">Community Server</a></li>
+                </ul>
+            </div>
+
+            <!-- Branding -->
+            <div class="footer-section">
+                <h4>Craftunity</h4>
+                <p class="small muted">
+                    Ein Minecraft‑Netzwerk für Abenteuer, Community und Kreativität.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 Craftunity – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+
+    <script>
     (function(){
       const slidesEl = document.getElementById('slides');
       const slides = Array.from(slidesEl.children);
@@ -256,6 +301,33 @@
       slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
     })();
   </script>
+      <script>
+          const currentPage = window.location.pathname.split("/").pop();
+          document.querySelectorAll(".nav-link").forEach(link => {
+              if (link.getAttribute("href") === currentPage) {
+                  link.classList.add("active");
+              }
+          });
+      </script>
+        <script>
+            async function loadDiscordOnline() {
+                try {
+                    const res = await fetch("online.php");
+                    const data = await res.json();
+
+                    const count = data.presence_count ?? 0;
+                    document.getElementById("discord-online").textContent =
+                        count + " Mitglieder online";
+                } catch (e) {
+                    document.getElementById("discord-online").textContent =
+                        "Offline / nicht erreichbar";
+                }
+            }
+
+            loadDiscordOnline();
+            setInterval(loadDiscordOnline, 30000); // alle 30 Sekunden aktualisieren
+        </script>
+</footer>
 </body>
 </html>
 
