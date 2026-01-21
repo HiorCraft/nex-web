@@ -361,6 +361,7 @@ section{padding:2rem 0}
     transform: translateY(0);
 }
 
+/* Start of nav */
 .nav-link.active {
     color: #4da3ff;
 }
@@ -392,8 +393,9 @@ nav {
     box-shadow: 0 0 12px rgba(77, 163, 255, 0.4);
     backdrop-filter: blur(4px);
     transition: background 0.3s ease, box-shadow 0.3s ease;
-}
+} /* Ende of nav */
 
+/* Start of Discord */
 .discord-online-box {
     margin-top: 1.5rem;
     padding: 1rem 1.25rem;
@@ -416,8 +418,10 @@ nav {
     background: #4da3ff;
     border-radius: 50%;
     box-shadow: 0 0 10px #4da3ff;
-}
+} /* End of Discord */
 
+
+/* Start of Footer */
 #footer {
     background: #0f0f0f;
     padding: 3rem 0;
@@ -465,5 +469,14 @@ nav {
     color: #777;
     font-size: 0.85rem;
 }
+.logo img {
+    height: 200px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
 
+.logo img:hover {
+    transform: scale(1.05);
+}
+/* End of Footer */
 

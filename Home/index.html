@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <title>Community – Craftunity Netzwerk</title>
+
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav">
+        <div class="brand">
+            <div class="brand">
+                <a href="index.html" aria-label="Craftunity Netzwerk" class="brand__link">
+        <span class="brand__logo">
+            <img src="../images/logo.png" alt="Craftunity Logo">
+        </span>
+                    <div class="brand__name">Craftunity Netzwerk</div>
+                </a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="../Home/index.html" class="nav-link">Home</a>
+            <a href="../news.html" class="nav-link">News</a>
+            <a href="../Rank/ranks.html" class="nav-link">Ränge</a>
+        </nav>
+    </div>
+</header>
+
+
+<section id="gallery"> // Bilder und Slideshow richtig machen und
+    <div class="container">
+
+        <div class="slideshow" aria-roledescription="carousel">
+            <div class="slides" id="slides">
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="1 von 3">
+                    <img src="../images/shot1.webp" alt="Parkour-Rennen">
+                    <div class="slide__caption">
+                        <h3>Smash</h3>
+                        <p>Kurz: Hab spaß mit deine Freunde mit paar runden Smash</p>
+                    </div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="2 von 3">
+                    <img src="../images/shot2.webp" alt="PvP-Arena">
+                    <div class="slide__caption">
+                        <h3>PvP-Arena</h3>
+                        <p>Kurz: 1v1 oder Teamkämpfe — zeig dein Können.</p>
+                    </div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="3 von 3">
+                    <img src="../images/shot3.webp" alt="Treasure Hunt">
+                    <div class="slide__caption">
+                        <h3>Treasure Hunt</h3>
+                        <p>Kurz: Rätsel, Schatztruhen und Überraschungen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slideshow__controls" aria-hidden="false">
+                <div style="display:flex;align-items:center;padding-left:0.5rem">
+                    <button class="slideshow__btn" id="prev" aria-label="Vorheriges">‹</button>
+                </div>
+
+                <div style="display:flex;align-items:center;padding-right:0.5rem">
+                    <button class="slideshow__btn" id="next" aria-label="Nächstes">›</button>
+                </div>
+
+                <div class="slideshow__dots" id="dots" role="tablist"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="news">
+        <div class="container">
+            <h2 class="section__title">Aktuelle News</h2> //API zum laden der News benutzt
+
+            <div class="grid grid-3" id="news-container"></div>
+
+            <script>
+                fetch("news.json")
+                    .then(r => r.json())
+                    .then(news => {
+                        const container = document.getElementById("news-container");
+                        container.innerHTML = "";
+
+
+                        news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                        news.forEach(n => {
+                            container.innerHTML += `
+            <article class="card">
+                <div class="small muted">${n.type} • ${n.date}</div>
+                <h3 style="margin:.5rem 0">${n.title}</h3>
+                <p class="small muted">${n.text}</p>
+            </article>
+            `;
+                        });
+                    })
+                    .catch(err => {
+                        console.error("Fehler beim Laden der News:", err);
+                    });
+            </script>
+        </div>
+    </section>
+
+    // Die Bilder und Texte für die Sektionen anpassen
+
+    <section id="JoinUs">
+        <div class="container flex-row">
+            <div class="joinus__image">
+                <img src="../images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+            </div>
+
+            <div class="server__text">
+                <h2 class="section__title">Zeig, wer du bist</h2>
+                <p class="small muted">
+                    Tritt dem Craftunity Netzwerk bei und erlebe spannende Abenteuer,
+                    baue beeindruckende Strukturen und knüpfe Freundschaften
+                    in einer lebendigen Community.
+                </p>
+
+                <div style="height:.75rem"></div>
+
+                <a class="btn" href="#" onclick="copyIP(); return false;">
+                    Join uns
+                </a>
+            </div>
+        </div>
+
+        <div id="copy-toast">Server-IP kopiert!</div>
+    </section>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("mc.craftunitymc.de");
+
+            const toast = document.getElementById("copy-toast");
+            toast.classList.add("show");
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2500);
+        }
+    </script>
+
+
+    <section id="premium">
+        <div class="container premium-flex">
+            <div class="premium-text">
+                <h2 class="section__title">Premium Rang</h2>
+                <p class="small muted">
+                    Sichere dir jetzt Premium und habe mehr spaß mit deine Freunde.
+                    Mit Tollen Vorteile zum beispiele Prioritäts‑Queue und Unterstütze uns für weitere Feats!
+                </p>
+                <div style="height:.75rem"></div>
+                <a class="btn" href="../Rank/ranks.html" target="_blank" rel="noopener">
+                    Zur Rangübersicht
+                </a>
+            </div>
+            <div class="premium-image">
+                <img src="../images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+            </div>
+        </div>
+    </section>
+
+
+    <section id="server">
+        <div class="container flex-row">
+            <div class="server__image">
+                <img src="../images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+            </div>
+            <div class="server__text">
+                <h2 class="section__title">Über uns</h2>
+                <p class="small muted">
+                    Erfahre mehr über das Team und die Geschichte hinter dem Craftunity Netzwerk.
+                    Wie es bist Jetzt geschaft haben, den Server zu Treiben.
+                </p>
+                <div style="height:.75rem"></div>
+                <a class="btn" href="../server.html" target="_blank" rel="noopener">Mehr erfahren</a>
+            </div>
+        </div>
+    </section>
+
+    //Bild für Dc
+
+    <section id="discord-cta">
+        <div class="container">
+            <div class="discord-card" role="region" aria-label="Discord">
+                <div>
+                    <h3>Tritt unserem Discord bei</h3>
+                    <p class="small">Sei Teil der Community, erhalte Support und Event‑Ankündigungen.</p>
+                </div>
+
+                <a class="btn btn--discord" id="discord"
+                   href="https://discord.gg/cU8tt3QsUp"
+                   target="_blank" rel="noopener">
+                    Discord beitreten
+                </a>
+            </div>
+
+            <!-- Eigene Online-Anzeige -->
+            <div class="discord-online-box">
+                <span class="dot"></span>
+                <span id="discord-online">Lädt...</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container footer-grid">
+
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="Craftunity Logo">
+            </a>
+
+            <div class="footer-section">
+                <h4>Craftunity</h4>
+                <p class="small muted">
+                    Ein Minecraft‑Netzwerk für Abenteuer, Community und Kreativität.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="../server.html">Server</a></li>
+                    <li><a href="../Rank/ranks.html">Ränge</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="../rules.html">Regeln</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="../server.html">Team beitreten</a></li>
+                    <li><a href="../Rank/ranks.html">Cretor Rang</a></li>
+                    <li><a href="../Rank/ranks.html">Nutzungsbedingungen</a></li>
+                    <li><a href="../privacy.html">Datenschutzerklärung</a></li>
+                    <li><a href="impressum.html.html">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Copyright 2025 - 2026 Craftunity</p>
+        </div>
+    </footer>
+
+
+    <script>
+    (function(){
+      const slidesEl = document.getElementById('slides');
+      const slides = Array.from(slidesEl.children);
+      const dotsEl = document.getElementById('dots');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let idx = 0, autoplay = true, interval = 4500, timer;
+
+      function renderDots(){
+        dotsEl.innerHTML = '';
+        slides.forEach((_, i) => {
+          const btn = document.createElement('button');
+          btn.className = 'dot-btn' + (i===idx? ' active':'');
+          btn.setAttribute('aria-label', 'Slide ' + (i+1));
+          btn.addEventListener('click', ()=> { go(i); });
+          dotsEl.appendChild(btn);
+        });
+      }
+
+      function update(){
+        slidesEl.style.transform = 'translateX(' + (-idx*100) + '%)';
+        Array.from(dotsEl.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
+      }
+
+      function go(i){
+        idx = (i + slides.length) % slides.length;
+        update();
+        restartAutoplay();
+      }
+
+      prev.addEventListener('click', ()=> go(idx-1));
+      next.addEventListener('click', ()=> go(idx+1));
+
+      function startAutoplay(){
+        if(!autoplay) return;
+        timer = setInterval(()=> go(idx+1), interval);
+      }
+      function restartAutoplay(){ clearInterval(timer); startAutoplay(); }
+
+      renderDots();
+      update();
+      startAutoplay();
+
+      const slideshow = document.querySelector('.slideshow');
+      slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
+      slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
+    })();
+  </script>
+      <script>
+          const currentPage = window.location.pathname.split("/").pop();
+          document.querySelectorAll(".nav-link").forEach(link => {
+              if (link.getAttribute("href") === currentPage) {
+                  link.classList.add("active");
+              }
+          });
+      </script>
+        <script>
+            async function loadDiscordOnline() {
+                try {
+                    const res = await fetch("online.php");
+                    const data = await res.json();
+
+                    const count = data.presence_count ?? 0;
+                    document.getElementById("discord-online").textContent =
+                        count + " Mitglieder online";
+                } catch (e) {
+                    document.getElementById("discord-online").textContent =
+                        "Offline / nicht erreichbar";
+                }
+            }
+
+            loadDiscordOnline();
+            setInterval(loadDiscordOnline, 30000); // alle 30 Sekunden aktualisieren
+        </script>
+</footer>
+</body>
+</html>
+
+
