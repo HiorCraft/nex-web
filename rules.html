@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>Community – Craftunity Netzwerk</title>
 
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
     <div class="container nav">
         <div class="brand">
             <div class="brand">
-                <a href="Home/index.html" aria-label="Craftunity Netzwerk" class="brand__link">
+                <a href="index.html" aria-label="Craftunity Netzwerk" class="brand__link">
         <span class="brand__logo">
             <img src="images/logo.png" alt="Craftunity Logo">
         </span>
@@ -22,17 +23,17 @@
             </div>
         </div>
 
-        <nav class="menu" aria-label="Hauptnavigation">
-            <a href="Home/index.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="Rank/ranks.html">Ränge</a>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="ranks.html" class="nav-link">Ränge</a>
         </nav>
     </div>
 </header>
 
 <section class="container">
     <div class="heading-box">
-        <h1 class="section__title">Die Reglen</h1> // Regeln neu Machen und im Dc Fragen
+        <h1 class="section__title">Die Reglen</h1>
     </div>
 
 <section id="rules">
@@ -114,47 +115,56 @@
         <div id="copy-toast">Server-IP kopiert!</div>
     </section>
 
-    <script>
-        function copyIP() {
-            navigator.clipboard.writeText("mc.craftunitymc.de");
+    <footer id="footer">
+        <div class="container footer-grid">
 
-            const toast = document.getElementById("copy-toast");
-            toast.classList.add("show");
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Craftunity Logo">
+            </a>
 
-            setTimeout(() => {
-                toast.classList.remove("show");
-            }, 2500);
-        }
-    </script>
-
-    <section id="premium">
-        <div class="container premium-flex">
-            <div class="premium-text">
-                <h2 class="section__title">Tritt unserem Discord bei</h2>
+            <div class="footer-section">
+                <h4>Craftunity</h4>
                 <p class="small muted">
-                    Sei Teil der Community, erhalte Support und Event‑Ankündigungen und verpasse keine Neuigkeiten mehr.
-
+                    Ein Minecraft‑Netzwerk für Abenteuer, Community und Kreativität.
                 </p>
-                <div style="height:.75rem"></div>
-                <a class="btn" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">
-                    Linke zum Discord
-                </a>
             </div>
-            <div class="premium-image">
-                <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="server.html">Server</a></li>
+                    <li><a href="ranks.html">Ränge</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="rules.html">Regeln</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="server.html">Team beitreten</a></li>
+                    <li><a href="ranks.html">Cretor Rang</a></li>
+                    <li><a href="ranks.html">Nutzungsbedingungen</a></li>
+                    <li><a href="privacy.html">Datenschutzerklärung</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                </ul>
             </div>
         </div>
-    </section>
 
-
-<footer class="footer">
-    <div class="inline">
-        <span class="small">© 2026 Craftunity Netzwerk</span>
-        <span class="small">•</span>
-        <a class="small" href="impressum.html">Impressum</a>
-        <span class="small">•</span>
-        <a class="small" href="privacy.html">Datenschutz</a>
-    </div>
+        <div class="footer-bottom">
+            <p>© Copyright 2025 - 2026 Craftunity</p>
+        </div>
+    </footer>
+    <script>
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 
 </body>
 </html>

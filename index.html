@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>Community – Craftunity Netzwerk</title>
 
 
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
@@ -16,7 +16,7 @@
             <div class="brand">
                 <a href="index.html" aria-label="Craftunity Netzwerk" class="brand__link">
         <span class="brand__logo">
-            <img src="../images/logo.png" alt="Craftunity Logo">
+            <img src="images/logo.png" alt="Craftunity Logo">
         </span>
                     <div class="brand__name">Craftunity Netzwerk</div>
                 </a>
@@ -24,21 +24,21 @@
         </div>
 
         <nav>
-            <a href="../Home/index.html" class="nav-link">Home</a>
-            <a href="../news.html" class="nav-link">News</a>
-            <a href="../Rank/ranks.html" class="nav-link">Ränge</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="ranks.html" class="nav-link">Ränge</a>
         </nav>
     </div>
 </header>
 
 
-<section id="gallery"> // Bilder und Slideshow richtig machen und
+<section id="gallery">
     <div class="container">
 
         <div class="slideshow" aria-roledescription="carousel">
             <div class="slides" id="slides">
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="1 von 3">
-                    <img src="../images/shot1.webp" alt="Parkour-Rennen">
+                    <img src="images/shot1.webp" alt="Parkour-Rennen">
                     <div class="slide__caption">
                         <h3>Smash</h3>
                         <p>Kurz: Hab spaß mit deine Freunde mit paar runden Smash</p>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="2 von 3">
-                    <img src="../images/shot2.webp" alt="PvP-Arena">
+                    <img src="images/shot2.webp" alt="PvP-Arena">
                     <div class="slide__caption">
                         <h3>PvP-Arena</h3>
                         <p>Kurz: 1v1 oder Teamkämpfe — zeig dein Können.</p>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="3 von 3">
-                    <img src="../images/shot3.webp" alt="Treasure Hunt">
+                    <img src="images/shot3.webp" alt="Treasure Hunt">
                     <div class="slide__caption">
                         <h3>Treasure Hunt</h3>
                         <p>Kurz: Rätsel, Schatztruhen und Überraschungen.</p>
@@ -78,7 +78,7 @@
 
     <section id="news">
         <div class="container">
-            <h2 class="section__title">Aktuelle News</h2> //API zum laden der News benutzt
+            <h2 class="section__title">Aktuelle News</h2>
 
             <div class="grid grid-3" id="news-container"></div>
 
@@ -109,12 +109,11 @@
         </div>
     </section>
 
-    // Die Bilder und Texte für die Sektionen anpassen
 
     <section id="JoinUs">
         <div class="container flex-row">
             <div class="joinus__image">
-                <img src="../images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+                <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
             </div>
 
             <div class="server__text">
@@ -159,12 +158,12 @@
                     Mit Tollen Vorteile zum beispiele Prioritäts‑Queue und Unterstütze uns für weitere Feats!
                 </p>
                 <div style="height:.75rem"></div>
-                <a class="btn" href="../Rank/ranks.html" target="_blank" rel="noopener">
+                <a class="btn" href="ranks.html" target="_blank" rel="noopener">
                     Zur Rangübersicht
                 </a>
             </div>
             <div class="premium-image">
-                <img src="../images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+                <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
             </div>
         </div>
     </section>
@@ -173,7 +172,7 @@
     <section id="server">
         <div class="container flex-row">
             <div class="server__image">
-                <img src="../images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+                <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
             </div>
             <div class="server__text">
                 <h2 class="section__title">Über uns</h2>
@@ -182,12 +181,10 @@
                     Wie es bist Jetzt geschaft haben, den Server zu Treiben.
                 </p>
                 <div style="height:.75rem"></div>
-                <a class="btn" href="../server.html" target="_blank" rel="noopener">Mehr erfahren</a>
+                <a class="btn" href="server.html" target="_blank" rel="noopener">Mehr erfahren</a>
             </div>
         </div>
     </section>
-
-    //Bild für Dc
 
     <section id="discord-cta">
         <div class="container">
@@ -203,12 +200,6 @@
                     Discord beitreten
                 </a>
             </div>
-
-            <!-- Eigene Online-Anzeige -->
-            <div class="discord-online-box">
-                <span class="dot"></span>
-                <span id="discord-online">Lädt...</span>
-            </div>
         </div>
     </section>
 
@@ -216,7 +207,7 @@
         <div class="container footer-grid">
 
             <a href="index.html" class="logo">
-                <img src="../images/logo.png" alt="Craftunity Logo">
+                <img src="images/logo.png" alt="Craftunity Logo">
             </a>
 
             <div class="footer-section">
@@ -230,10 +221,10 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="index.html">Startseite</a></li>
-                    <li><a href="../server.html">Server</a></li>
-                    <li><a href="../Rank/ranks.html">Ränge</a></li>
+                    <li><a href="server.html">Server</a></li>
+                    <li><a href="ranks.html">Ränge</a></li>
                     <li><a href="team.html">Team</a></li>
-                    <li><a href="../rules.html">Regeln</a></li>
+                    <li><a href="rules.html">Regeln</a></li>
                 </ul>
             </div>
 
@@ -241,11 +232,11 @@
             <div class="footer-section">
                 <h4>Kontakt</h4>
                 <ul>
-                    <li><a href="../server.html">Team beitreten</a></li>
-                    <li><a href="../Rank/ranks.html">Cretor Rang</a></li>
-                    <li><a href="../Rank/ranks.html">Nutzungsbedingungen</a></li>
-                    <li><a href="../privacy.html">Datenschutzerklärung</a></li>
-                    <li><a href="impressum.html.html">Impressum</a></li>
+                    <li><a href="server.html">Team beitreten</a></li>
+                    <li><a href="ranks.html">Cretor Rang</a></li>
+                    <li><a href="ranks.html">Nutzungsbedingungen</a></li>
+                    <li><a href="privacy.html">Datenschutzerklärung</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
                 </ul>
             </div>
         </div>
@@ -257,82 +248,61 @@
 
 
     <script>
-    (function(){
-      const slidesEl = document.getElementById('slides');
-      const slides = Array.from(slidesEl.children);
-      const dotsEl = document.getElementById('dots');
-      const prev = document.getElementById('prev');
-      const next = document.getElementById('next');
-      let idx = 0, autoplay = true, interval = 4500, timer;
+        (function(){
+            const slidesEl = document.getElementById('slides');
+            const slides = Array.from(slidesEl.children);
+            const dotsEl = document.getElementById('dots');
+            const prev = document.getElementById('prev');
+            const next = document.getElementById('next');
+            let idx = 0, autoplay = true, interval = 4500, timer;
 
-      function renderDots(){
-        dotsEl.innerHTML = '';
-        slides.forEach((_, i) => {
-          const btn = document.createElement('button');
-          btn.className = 'dot-btn' + (i===idx? ' active':'');
-          btn.setAttribute('aria-label', 'Slide ' + (i+1));
-          btn.addEventListener('click', ()=> { go(i); });
-          dotsEl.appendChild(btn);
-        });
-      }
-
-      function update(){
-        slidesEl.style.transform = 'translateX(' + (-idx*100) + '%)';
-        Array.from(dotsEl.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
-      }
-
-      function go(i){
-        idx = (i + slides.length) % slides.length;
-        update();
-        restartAutoplay();
-      }
-
-      prev.addEventListener('click', ()=> go(idx-1));
-      next.addEventListener('click', ()=> go(idx+1));
-
-      function startAutoplay(){
-        if(!autoplay) return;
-        timer = setInterval(()=> go(idx+1), interval);
-      }
-      function restartAutoplay(){ clearInterval(timer); startAutoplay(); }
-
-      renderDots();
-      update();
-      startAutoplay();
-
-      const slideshow = document.querySelector('.slideshow');
-      slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
-      slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
-    })();
-  </script>
-      <script>
-          const currentPage = window.location.pathname.split("/").pop();
-          document.querySelectorAll(".nav-link").forEach(link => {
-              if (link.getAttribute("href") === currentPage) {
-                  link.classList.add("active");
-              }
-          });
-      </script>
-        <script>
-            async function loadDiscordOnline() {
-                try {
-                    const res = await fetch("online.php");
-                    const data = await res.json();
-
-                    const count = data.presence_count ?? 0;
-                    document.getElementById("discord-online").textContent =
-                        count + " Mitglieder online";
-                } catch (e) {
-                    document.getElementById("discord-online").textContent =
-                        "Offline / nicht erreichbar";
-                }
+            function renderDots(){
+                dotsEl.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'dot-btn' + (i===idx? ' active':'');
+                    btn.setAttribute('aria-label', 'Slide ' + (i+1));
+                    btn.addEventListener('click', ()=> { go(i); });
+                    dotsEl.appendChild(btn);
+                });
             }
 
-            loadDiscordOnline();
-            setInterval(loadDiscordOnline, 30000); // alle 30 Sekunden aktualisieren
-        </script>
-</footer>
+            function update(){
+                slidesEl.style.transform = 'translateX(' + (-idx*100) + '%)';
+                Array.from(dotsEl.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
+            }
+
+            function go(i){
+                idx = (i + slides.length) % slides.length;
+                update();
+                restartAutoplay();
+            }
+
+            prev.addEventListener('click', ()=> go(idx-1));
+            next.addEventListener('click', ()=> go(idx+1));
+
+            function startAutoplay(){
+                if(!autoplay) return;
+                timer = setInterval(()=> go(idx+1), interval);
+            }
+            function restartAutoplay(){ clearInterval(timer); startAutoplay(); }
+
+            renderDots();
+            update();
+            startAutoplay();
+
+            const slideshow = document.querySelector('.slideshow');
+            slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
+            slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
+        })();
+    </script>
+    <script>
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 </body>
 </html>
-
-

@@ -1,19 +1,20 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="images/logo.png">
-    <title>News – Craftunity Netzwerk</title>
+    <title>Community – Craftunity Netzwerk</title>
+
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header class="site-header">
     <div class="container nav">
         <div class="brand">
             <div class="brand">
-                <a href="Home/index.html" aria-label="Craftunity Netzwerk" class="brand__link">
+                <a href="index.html" aria-label="Craftunity Netzwerk" class="brand__link">
         <span class="brand__logo">
             <img src="images/logo.png" alt="Craftunity Logo">
         </span>
@@ -22,10 +23,10 @@
             </div>
         </div>
 
-        <nav class="menu" aria-label="Hauptnavigation">
-            <a href="Home/index.html">Home</a>
-            <a class="active" href="news.html">News</a>
-            <a href="Rank/ranks.html">Ränge</a>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="news.html" class="nav-link">News</a>
+            <a href="ranks.html" class="nav-link">Ränge</a>
         </nav>
     </div>
 </header>
@@ -95,12 +96,57 @@
     </div>
 </section>
 
-<footer class="footer">
-    <div class="inline">
-        <span class="small">© 2026 Craftunity Netzwerk</span>
-        <a class="small" href="privacy.html">Datenschutz</a>
+<footer id="footer">
+    <div class="container footer-grid">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Craftunity Logo">
+        </a>
+
+        <div class="footer-section">
+            <h4>Craftunity</h4>
+            <p class="small muted">
+                Ein Minecraft‑Netzwerk für Abenteuer, Community und Kreativität.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="server.html">Server</a></li>
+                <li><a href="ranks.html">Ränge</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="rules.html">Regeln</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <ul>
+                <li><a href="server.html">Team beitreten</a></li>
+                <li><a href="ranks.html">Cretor Rang</a></li>
+                <li><a href="ranks.html">Nutzungsbedingungen</a></li>
+                <li><a href="privacy.html">Datenschutzerklärung</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© Copyright 2025 - 2026 Craftunity</p>
     </div>
 </footer>
+
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
 
 </body>
 </html>
