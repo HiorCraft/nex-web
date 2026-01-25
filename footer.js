@@ -27,7 +27,7 @@ document.getElementById("footer").innerHTML = `
       <h4>Kontakt</h4>
       <ul>
         <li><a href="Team.html">Team beitreten</a></li>
-        <li><a href="cretor.html">Cretor Rang</a></li>
+        <li><a href="Content.html">Content Rang</a></li>
         <li><a href="ranks.html">Nutzungsbedingungen</a></li>
         <li><a href="privacy.html">Datenschutzerklärung</a></li>
         <li><a href="impressum.html">Impressum</a></li>
