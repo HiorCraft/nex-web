@@ -1,7 +1,7 @@
 document.getElementById("footer").innerHTML = `
   <div class="container footer-grid">
 
-    <a href="index.html" class="logo">
+    <a href="Home.html" class="logo">
       <img src="images/logo.png" alt="Craftunity Logo">
     </a>
 
@@ -15,11 +15,11 @@ document.getElementById("footer").innerHTML = `
     <div class="footer-section">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="mods.html">Mods</a></li>
-        <li><a href="ranks.html">Ranke</a></li>
-        <li><a href="server.html">Team</a></li>
-        <li><a href="rules.html">Regeln</a></li>
+        <li><a href="Home.html">Startseite</a></li>
+        <li><a href="Mods.html">Mods</a></li>
+        <li><a href="Ranks.html">Ranke</a></li>
+        <li><a href="Craftunity.html">Team</a></li>
+        <li><a href="Regeln.html">Regeln</a></li>
       </ul>
     </div>
 
@@ -28,9 +28,9 @@ document.getElementById("footer").innerHTML = `
       <ul>
         <li><a href="Team.html">Team beitreten</a></li>
         <li><a href="Content.html">Content Rang</a></li>
-        <li><a href="ranks.html">Nutzungsbedingungen</a></li>
-        <li><a href="privacy.html">Datenschutzerklärung</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="Ranks.html">Nutzungsbedingungen</a></li>
+        <li><a href="Datenschutz.html">Datenschutzerklärung</a></li>
+        <li><a href="Impressum.html">Impressum</a></li>
       </ul>
     </div>
   </div>
