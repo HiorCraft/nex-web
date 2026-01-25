@@ -1,7 +1,7 @@
 document.getElementById("footer").innerHTML = `
   <div class="container footer-grid">
 
-    <a href="Index.html" class="logo">
+    <a href="index.html" class="logo">
       <img src="images/logo.png" alt="Craftunity Logo">
     </a>
 
@@ -15,7 +15,7 @@ document.getElementById("footer").innerHTML = `
     <div class="footer-section">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="Index.html">Startseite</a></li>
+        <li><a href="index.html">Startseite</a></li>
         <li><a href="Mods.html">Mods</a></li>
         <li><a href="Ranks.html">Ranke</a></li>
         <li><a href="Craftunity.html">Team</a></li>
