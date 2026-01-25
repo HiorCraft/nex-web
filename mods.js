@@ -1,24 +1,27 @@
 fetch("mods.json")
     .then(res => res.json())
-    .then(mods => {
-        const container = document.getElementById("mod-list");
+    .then(data => {
+        loadMods(data.allowed, "allowed-mods");
+        loadMods(data.banned, "banned-mods");
+    });
 
-        mods.forEach(mod => {
-            const card = document.createElement("article");
-            card.classList.add("card", "mod-card");
+function loadMods(list, elementId) {
+    const ul = document.getElementById(elementId);
 
-            card.innerHTML = `
-                <img src="${mod.icon}" alt="${mod.name} Icon" class="mod-icon">
+    list.forEach(mod => {
+        fetch(`https://api.modrinth.com/v2/project/${mod.slug}`)
+            .then(res => res.json())
+            .then(api => {
+                const li = document.createElement("li");
+                li.classList.add("mod-item");
 
-                <h3>${mod.name}</h3>
-                <p class="small muted">${mod.description}</p>
+                li.innerHTML = `
+                    <img src="${api.icon_url}" class="mod-icon" alt="${api.title} Icon">
+                    <a href="https://modrinth.com/mod/${api.slug}" target="_blank">${api.title}</a>
+                `;
 
-                <a class="btn small" href="${mod.modrinth}" target="_blank" rel="noopener">
-                    Auf Modrinth ansehen
-                </a>
-            `;
-
-            container.appendChild(card);
-        });
-    })
-    .catch(err => console.error("Fehler beim Laden der Modliste:", err));
+                ul.appendChild(li);
+            })
+            .catch(err => console.error("Fehler bei Modrinth API:", err));
+    });
+}

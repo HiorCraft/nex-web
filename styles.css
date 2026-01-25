@@ -615,18 +615,60 @@ nav {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*
-    Mods Card Styles
- */
-.mod-card {
-    padding: 1.25rem;
-    text-align: center;
-    border-radius: 12px;
+/* Card um die Liste */
+.mod-card-wrapper {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: 16px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
 }
 
-.mod-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: .75rem;
-    image-rendering: crisp-edges;
+/* Liste zentriert */
+.mod-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;
 }
+
+/* Mod-Eintrag */
+.mod-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: .8rem 1rem;
+    border-radius: 12px;
+    transition: transform .15s ease, background .15s ease;
+}
+
+/* Hover-Effekt */
+.mod-item:hover {
+    background: #2a2a2a;
+    transform: translateY(-3px);
+}
+
+/* Icon größer */
+.mod-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Mod-Name größer */
+.mod-item a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover Text */
+.mod-item a:hover {
+    text-decoration: underline;
+}
+

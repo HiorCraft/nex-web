@@ -1,26 +1,38 @@
-[
-  {
-    "name": "Sodium",
-    "description": "Verbessert FPS und Performance.",
-    "icon": "images/mods/sodium.png",
-    "modrinth": "https://modrinth.com/mod/sodium"
-  },
-  {
-    "name": "Lithium",
-    "description": "Optimiert Server- und Clientperformance.",
-    "icon": "images/mods/lithium.png",
-    "modrinth": "https://modrinth.com/mod/lithium"
-  },
-  {
-    "name": "Replay Mod",
-    "description": "Erlaubt Cinematics und Aufnahmen.",
-    "icon": "images/mods/replaymod.png",
-    "modrinth": "https://modrinth.com/mod/replaymod"
-  },
-  {
-    "name": "Xaero's Minimap",
-    "description": "Erlaubt ohne Radar (keine Spieleranzeige).",
-    "icon": "images/mods/minimap.png",
-    "modrinth": "https://modrinth.com/mod/xaeros-minimap"
-  }
-]
+{
+  "allowed": [
+    { "slug": "sodium" },
+    { "slug": "lithium" },
+    { "slug": "Iris-Shaders" },
+    { "slug": "Entity-Culling" },
+    { "slug": "xaeros-minimap" },
+    { "slug": "Xaero's-World-Map" },
+    { "slug": "AppleSkin" },
+    { "slug": "Zoomify" },
+    { "slug": "BetterF3" },
+    { "slug": "Shulker-Box-Tooltip" },
+    { "slug": "Bobby" },
+    { "slug": "Better-Third-Person" },
+    { "slug": "Eating-Animation" },
+    { "slug": "Particular-✨" },
+    { "slug": "Do-a-Barrel-Roll" },
+    { "slug": "Resourcify" },
+    { "slug": "Gamma-Utils" },
+    { "slug": "Nvidium" },
+    { "slug": "Flashback" },
+    { "slug": "Show-Me-Your-Skin!" },
+    { "slug": "uku's-Armor-HUD" },
+    { "slug": "Hold-My-Items" },
+    { "slug": "InventoryHUD+" },
+    { "slug": "Auth-Me" }
+  ],
+  "banned": [
+    { "slug": "Inventory-Profiles-Next" },
+    { "slug": "Litematica" },
+    { "slug": "Freecam" },
+    { "slug": "Tweakeroo" },
+    { "slug": "Fast-Scrolling" },
+    { "slug": "Bridging-Mod" },
+    { "slug": "MiniHUD" }
+
+  ]
+}
