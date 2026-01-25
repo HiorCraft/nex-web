@@ -1,11 +1,11 @@
 fetch("mods.json")
     .then(res => res.json())
     .then(data => {
-        loadMods(data.allowed, "allowed-mods");
-        loadMods(data.banned, "banned-mods");
+        loadMods(data.allowed, "allowed-mods", "whitelist");
+        loadMods(data.banned, "banned-mods", "blacklist");
     });
 
-function loadMods(list, elementId) {
+function loadMods(list, elementId, type) {
     const ul = document.getElementById(elementId);
 
     list.forEach(mod => {
@@ -13,7 +13,7 @@ function loadMods(list, elementId) {
             .then(res => res.json())
             .then(api => {
                 const li = document.createElement("li");
-                li.classList.add("mod-item");
+                li.classList.add("mod-item", type); // <‑‑ HIER passiert die Magie
 
                 li.innerHTML = `
                     <img src="${api.icon_url}" class="mod-icon" alt="${api.title} Icon">
@@ -21,7 +21,6 @@ function loadMods(list, elementId) {
                 `;
 
                 ul.appendChild(li);
-            })
-            .catch(err => console.error("Fehler bei Modrinth API:", err));
+            });
     });
 }

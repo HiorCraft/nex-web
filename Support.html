@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Hexoria – Home</title>
+
+
+    <link rel="stylesheet" href="styles.css">
+    <header id="header"></header>
+    <script src="header.js"></script>
+</head>
+<body>
+
+<h3 style="margin-top:2rem; text-align:center;">Ticket‑Arten</h3>
+
+<div class="ticket-types-column">
+
+    <div class="ticket-type ticket-blue">
+        <h4>🔵 Discord Support</h4>
+        <p class="small muted">
+            Hilfe bei Rollen, Meldungen, Moderation oder technischen Problemen auf Discord.
+        </p>
+    </div>
+
+    <div class="ticket-type ticket-green">
+        <h4>🟢 Minecraft Support</h4>
+        <p class="small muted">
+            Unterstützung bei Ingame‑Problemen, Verbindungsfehlern, Mods oder Gameplay‑Fragen.
+        </p>
+    </div>
+
+    <div class="ticket-type ticket-yellow">
+        <h4>🟡 Bug Report</h4>
+        <p class="small muted">
+            Melde Fehler, Glitches oder technische Probleme, damit wir sie schnell beheben können.
+        </p>
+    </div>
+
+</div>
+
+
+
+<footer id="footer"></footer>
+<script src="footer.js"></script>
+
+
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
+<script src="mods.js"></script>
+
+
+</body>
+</html>
