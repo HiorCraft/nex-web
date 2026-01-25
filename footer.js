@@ -16,9 +16,9 @@ document.getElementById("footer").innerHTML = `
       <h4>Navigation</h4>
       <ul>
         <li><a href="index.html">Startseite</a></li>
-        <li><a href="server.html">Server</a></li>
+        <li><a href="mods.html">Mods</a></li>
         <li><a href="ranks.html">Ranke</a></li>
-        <li><a href="team.html">Team</a></li>
+        <li><a href="server.html">Team</a></li>
         <li><a href="rules.html">Regeln</a></li>
       </ul>
     </div>
@@ -26,7 +26,7 @@ document.getElementById("footer").innerHTML = `
     <div class="footer-section">
       <h4>Kontakt</h4>
       <ul>
-        <li><a href="server.html">Team beitreten</a></li>
+        <li><a href="Team.html">Team beitreten</a></li>
         <li><a href="cretor.html">Cretor Rang</a></li>
         <li><a href="ranks.html">Nutzungsbedingungen</a></li>
         <li><a href="privacy.html">Datenschutzerklärung</a></li>

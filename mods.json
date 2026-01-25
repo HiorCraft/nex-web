@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sodium",
+    "description": "Verbessert FPS und Performance.",
+    "icon": "images/mods/sodium.png",
+    "modrinth": "https://modrinth.com/mod/sodium"
+  },
+  {
+    "name": "Lithium",
+    "description": "Optimiert Server- und Clientperformance.",
+    "icon": "images/mods/lithium.png",
+    "modrinth": "https://modrinth.com/mod/lithium"
+  },
+  {
+    "name": "Replay Mod",
+    "description": "Erlaubt Cinematics und Aufnahmen.",
+    "icon": "images/mods/replaymod.png",
+    "modrinth": "https://modrinth.com/mod/replaymod"
+  },
+  {
+    "name": "Xaero's Minimap",
+    "description": "Erlaubt ohne Radar (keine Spieleranzeige).",
+    "icon": "images/mods/minimap.png",
+    "modrinth": "https://modrinth.com/mod/xaeros-minimap"
+  }
+]

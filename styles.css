@@ -614,3 +614,19 @@ nav {
     backdrop-filter: blur(4px);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/*
+    Mods Card Styles
+ */
+.mod-card {
+    padding: 1.25rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.mod-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: .75rem;
+    image-rendering: crisp-edges;
+}
