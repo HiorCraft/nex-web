@@ -15,85 +15,72 @@
 </head>
 <body>
 
- <section class="container">
+<section id="rules" class="container">
     <div class="heading-box">
-        <h1 class="section__title">Die Reglen</h1>
+        <h1 class="section__title">Die Regeln</h1>
     </div>
 
-  <section id="rules">
+    <div class="card rules-card">
+        <h3>1. Allgemeines Verhalten</h3>
+        <p class="small muted">
+            Behandle andere Spieler respektvoll. Beleidigungen, Diskriminierung oder toxisches Verhalten
+            sind nicht erlaubt. Jeder soll sich auf dem Server wohlfühlen.
+        </p>
+
+        <h3>2. Cheating & Modifikationen</h3>
+        <p class="small muted">
+            Jegliche Hacks, unfairen Modifikationen oder externe Tools, die dir einen Vorteil verschaffen,
+            sind streng verboten. Hier ist eine Liste erlaubter Mods:
+            <a href="Mods.html" target="_blank" rel="noopener noreferrer">Erlaubte Mods</a>.
+        </p>
+
+        <h3>3. Bugusing</h3>
+        <p class="small muted">
+            Das Ausnutzen von Fehlern, Glitches oder Exploits ist untersagt. Bitte melde Bugs direkt
+            im Ticket-System oder im entsprechenden Kanal.
+        </p>
+
+        <h3>4. Werbung</h3>
+        <p class="small muted">
+            Fremdwerbung für andere Server, Projekte oder Communities ist nicht gestattet, weder im Chat
+            noch per Direktnachricht.
+        </p>
+
+        <h3>5. Chat & Kommunikation</h3>
+        <p class="small muted">
+            Spam, Capslock‑Spam, Provokationen oder unnötige Störungen im Chat sind nicht erlaubt.
+            Nutze den Chat verantwortungsvoll.
+        </p>
+
+        <h3>6. Team‑Respekt</h3>
+        <p class="small muted">
+            Anweisungen des Teams sind zu befolgen. Das Team sorgt für Fairness und ein angenehmes Spielerlebnis.
+        </p>
+
+        <h3>7. Datenschutz</h3>
+        <p class="small muted">
+            Persönliche Daten anderer Spieler dürfen nicht veröffentlicht oder weitergegeben werden.
+        </p>
+
+        <h3>8. Konsequenzen</h3>
+        <p class="small muted">
+            Verstöße gegen die Regeln können zu Verwarnungen, temporären Sperren oder permanenten
+            Ausschlüssen führen – abhängig von der Schwere des Verstoßes.
+        </p>
+    </div>
+</section>
+
+<section id="discord-cta">
     <div class="container">
-
-        <div class="card" style="padding:1.5rem;">
-            <h3>1. Allgemeines Verhalten</h3>
-            <p class="small muted">
-                Behandle andere Spieler respektvoll. Beleidigungen, Diskriminierung oder toxisches Verhalten
-                sind nicht erlaubt. Jeder soll sich auf dem Server wohlfühlen.
-            </p>
-
-            <h3>2. Cheating & Modifikationen</h3>
-            <p class="small muted">
-                Jegliche Hacks, unfairen Modifikationen oder externe Tools, die dir einen Vorteil verschaffen,
-                sind streng verboten. Hier ist eine Liste erlaubter Mods: <a href="Mods.html" target="_blank" rel="noopener noreferrer">Erlaubte Mods</a>.
-            </p>
-
-            <h3>3. Bugusing</h3>
-            <p class="small muted">
-                Das Ausnutzen von Fehlern, Glitches oder Exploits ist untersagt. Bitte melde Bugs direkt
-                im Ticket-System oder im entsprechenden Kanal.
-            </p>
-
-            <h3>4. Werbung</h3>
-            <p class="small muted">
-                Fremdwerbung für andere Server, Projekte oder Communities ist nicht gestattet, weder im Chat
-                noch per Direktnachricht.
-            </p>
-
-            <h3>5. Chat & Kommunikation</h3>
-            <p class="small muted">
-                Spam, Capslock‑Spam, Provokationen oder unnötige Störungen im Chat sind nicht erlaubt.
-                Nutze den Chat verantwortungsvoll.
-            </p>
-
-            <h3>7. Datenschutz</h3>
-            <p class="small muted">
-                Persönliche Daten anderer Spieler dürfen nicht veröffentlicht oder weitergegeben werden.
-            </p>
-
-            <h3>8. Konsequenzen</h3>
-            <p class="small muted">
-                Verstöße gegen die Regeln können zu Verwarnungen, temporären Sperren oder permanenten
-                Ausschlüssen führen,  abhängig von der Schwere des Verstoßes.
-            </p>
+        <div class="discord-card" role="region" aria-label="Discord">
+            <div>
+                <h3>Tritt unserem Discord bei</h3>
+                <p class="small">Sei Teil der Community, erhalte Support und Event‑Ankündigungen.</p>
+            </div>
+            <a class="btn btn--discord" id="discord" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">Discord beitreten</a>
         </div>
     </div>
-    </section>
-
-    <section id="JoinUs">
-        <div class="container flex-row">
-            <div class="joinus__image">
-                <img src="images/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
-            </div>
-
-            <div class="server__text">
-                <h2 class="section__title">Zeig, wer du bist</h2>
-                <p class="small muted">
-                    Tritt dem Hexoria Netzwerk bei und erlebe spannende Abenteuer,
-                    baue beeindruckende Strukturen und knüpfe Freundschaften
-                    in einer lebendigen Community.
-                </p>
-
-                <div style="height:.75rem"></div>
-
-                <a class="btn" href="#" onclick="copyIP(); return false;">
-                    Join uns
-                </a>
-            </div>
-        </div>
-
-        <div id="copy-toast">Server-IP kopiert!</div>
-    </section>
-</body>
-
+</section>
 
     <footer id="footer"></footer>
     <script src="footer.js"></script>
@@ -109,3 +96,4 @@
     </script>
 
 </html>
+</body>
