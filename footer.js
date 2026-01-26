@@ -28,7 +28,7 @@ document.getElementById("footer").innerHTML = `
       <ul>
         <li><a href="Team.html">Team beitreten</a></li>
         <li><a href="Content.html">Content Rang</a></li>
-        <li><a href="Ranks.html">Nutzungsbedingungen</a></li>
+        <li><a href="Nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
         <li><a href="Datenschutz.html">Datenschutzerklärung</a></li>
         <li><a href="Impressum.html">Impressum</a></li>
       </ul>
