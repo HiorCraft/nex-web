@@ -618,9 +618,10 @@ nav {
 /*
     Mods Card Styles
  */
+/* Container für die Mod-Karten */
 .mod-card-wrapper {
     padding: 2rem;
-    max-width: 600px;
+    max-width: 900px;
     margin: 2rem auto;
     border-radius: 16px;
     background: #1a1a1a;
@@ -628,52 +629,41 @@ nav {
     box-shadow: 0 0 20px rgba(0,0,0,0.25);
 }
 .mod-list {
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
     padding: 0;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
+    list-style: none;
 }
 .mod-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-    padding: .8rem 1rem;
+    text-align: center;
+
+    padding: 1rem;
     border-radius: 12px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+
     transition: transform .15s ease, background .15s ease;
 }
-.mod-item.whitelist {
-    background: rgba(0, 255, 100, 0.08);
-    border: 1px solid rgba(0, 255, 100, 0.25);
+
+.mod-item:hover {
+    transform: translateY(-4px);
+    background: #222;
 }
-
-.mod-item.whitelist:hover {
-    background: rgba(0, 255, 100, 0.15);
-    transform: translateY(-3px);
-}
-
-
-.mod-item.blacklist {
-    background: rgba(255, 0, 0, 0.08);
-    border: 1px solid rgba(255, 0, 0, 0.25);
-}
-
-.mod-item.blacklist:hover {
-    background: rgba(255, 0, 0, 0.15);
-    transform: translateY(-3px);
-}
-
 
 .mod-icon {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     border-radius: 8px;
-    flex-shrink: 0;
+    margin-bottom: .6rem;
 }
 
-
 .mod-item a {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -682,10 +672,24 @@ nav {
 .mod-item a:hover {
     text-decoration: underline;
 }
+.mod-item.whitelist {
+    border-left: 4px solid #00e676;
+}
+
+.mod-item.blacklist {
+    border-left: 4px solid #ff6b6b;
+}
+
+.mod-info-box {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+}
 /*
     Support Card Styles
  */
-/* Container untereinander */
 .ticket-types-column {
     display: flex;
     flex-direction: column;
@@ -694,7 +698,6 @@ nav {
     margin: 1.5rem auto;
 }
 
-/* Jede Ticket-Art */
 .ticket-type {
     padding: 1.2rem 1.4rem;
     border-radius: 12px;
@@ -703,18 +706,15 @@ nav {
     transition: transform .15s ease, background .15s ease;
 }
 
-/* Hover */
 .ticket-type:hover {
     transform: translateY(-4px);
     background: #222;
 }
 
-/* Farben */
 .ticket-blue { border-left: 4px solid #4dabf7; }
 .ticket-green { border-left: 4px solid #00e676; }
 .ticket-yellow { border-left: 4px solid #ffd43b; }
 
-/* Titel */
 .ticket-type h4 {
     margin: 0 0 .4rem 0;
     font-size: 1.2rem;
