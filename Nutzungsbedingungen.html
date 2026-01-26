@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Hexoria – Nutzungsbedingungen</title>
+
+
+    <link rel="stylesheet" href="styles.css">
+
+    <header id="header"></header>
+    <script src="header.js"></script>
+
+</head>
+<body>
+
+<section id="terms" class="container">
+    <div class="heading-box">
+        <h1 class="section__title">Nutzungsbedingungen</h1>
+    </div>
+
+    <div class="card terms-card">
+        <h2>1. Geltungsbereich</h2>
+        <p class="small muted">
+            Diese Nutzungsbedingungen gelten für die Nutzung des Craftunity‑Minecraft‑Servers, der Website,
+            des Discord‑Servers sowie aller damit verbundenen Dienste. Mit dem Betreten oder Verwenden
+            eines dieser Dienste akzeptierst du diese Bedingungen.
+        </p>
+
+        <h2>2. Zugang & Voraussetzungen</h2>
+        <p class="small muted">
+            Du benötigst einen gültigen Minecraft‑Account, um den Server zu betreten. Die Nutzung des Servers
+            ist nur für private, nicht‑kommerzielle Zwecke erlaubt. Du bist selbst dafür verantwortlich,
+            deine Zugangsdaten sicher aufzubewahren und nicht an Dritte weiterzugeben.
+        </p>
+
+        <h2>3. Verhalten auf dem Server</h2>
+        <p class="small muted">
+            Du verpflichtest dich zu einem respektvollen Umgang mit anderen Spielern. Beleidigungen,
+            Diskriminierung, Belästigung oder toxisches Verhalten sind untersagt. Das Ausnutzen von Bugs,
+            Glitches oder technischen Fehlern ist verboten und muss dem Team gemeldet werden.
+        </p>
+
+        <h2>4. Modifikationen & externe Tools</h2>
+        <p class="small muted">
+            Erlaubt sind ausschließlich Mods, die keinen unfairen Vorteil bieten. Eine Übersicht über erlaubte
+            und verbotene Mods findest du auf unserer Mod‑Seite:
+            <a href="Mods.html" target="_blank" rel="noopener noreferrer">Mod‑Übersicht</a>.
+            Hacks, Cheats, modifizierte Clients oder Tools, die das Gameplay manipulieren, sind streng verboten.
+        </p>
+
+        <h2>5. Inhalte & Eigentum</h2>
+        <p class="small muted">
+            Alle serverseitigen Inhalte (Bauten, Systeme, Plugins, Designs, Logos, Texte) gehören Craftunity
+            bzw. den jeweiligen Rechteinhabern. Das Kopieren, Veröffentlichen oder Weitergeben ohne
+            ausdrückliche Erlaubnis ist untersagt. Eigene Bauwerke bleiben geistiges Eigentum des Erstellers,
+            dürfen aber serverintern von Craftunity genutzt und präsentiert werden.
+        </p>
+
+        <h2>6. Datenschutz</h2>
+        <p class="small muted">
+            Persönliche Daten werden vertraulich behandelt und nicht ohne Rechtsgrundlage an Dritte
+            weitergegeben. Du darfst keine persönlichen Daten anderer Spieler sammeln, veröffentlichen
+            oder weitergeben. Weitere Informationen findest du in unserer Datenschutzerklärung.
+        </p>
+
+        <h2>7. Sanktionen & Maßnahmen</h2>
+        <p class="small muted">
+            Bei Verstößen gegen Regeln oder Nutzungsbedingungen kann das Team unter anderem folgende
+            Maßnahmen ergreifen: Verwarnungen, temporäre Sperren, permanente Ausschlüsse oder Einschränkungen
+            von Funktionen. Die Entscheidung liegt beim Team und ist in der Regel endgültig.
+        </p>
+
+        <h2>8. Käufe & virtuelle Güter</h2>
+        <p class="small muted">
+            Käufe von Rängen oder virtuellen Gütern dienen der Unterstützung des Servers. Virtuelle Güter
+            sind in der Regel nicht erstattungsfähig, außer wenn gesetzlich vorgeschrieben. Manipulationen
+            oder Missbrauch des Shopsystems können zu einem Bann oder weiteren Maßnahmen führen.
+        </p>
+
+        <h2>9. Haftungsausschluss</h2>
+        <p class="small muted">
+            Craftunity übernimmt keine Haftung für Datenverlust, Serverausfälle, technische Probleme oder
+            Schäden, die durch die Nutzung des Servers oder der Dienste entstehen. Es besteht kein Anspruch
+            auf permanente Erreichbarkeit oder bestimmte Funktionen. Die Nutzung erfolgt auf eigene
+            Verantwortung.
+        </p>
+
+        <h2>10. Änderungen der Nutzungsbedingungen</h2>
+        <p class="small muted">
+            Craftunity kann diese Nutzungsbedingungen jederzeit anpassen oder erweitern. Änderungen werden
+            auf der Website oder im Discord bekanntgegeben. Mit der weiteren Nutzung der Dienste akzeptierst
+            du die jeweils aktuelle Fassung der Nutzungsbedingungen.
+        </p>
+
+        <h2>11. Kontakt & Support</h2>
+        <p class="small muted">
+            Bei Fragen, Problemen oder Unklarheiten kannst du jederzeit unseren Support kontaktieren und
+            ein Ticket eröffnen (z.&nbsp;B. Discord Support, Minecraft Support oder Bug Report).
+        </p>
+        <p class="small muted" style="text-align:center; margin-top:1rem;">
+            <a href="DEIN_DISCORD_LINK" class="btn-green" target="_blank" rel="noopener noreferrer">
+                Zum Discord‑Support
+            </a>
+        </p>
+    </div>
+</section>
+
+
+<footer id="footer"></footer>
+<script src="footer.js"></script>
+
+
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
+
+</html>
+</body>
