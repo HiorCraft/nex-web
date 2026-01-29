@@ -15,22 +15,22 @@ document.getElementById("footer").innerHTML = `
     <div class="footer-section">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="Mods.html">Mods</a></li>
-        <li><a href="Ranks.html">Ranke</a></li>
-        <li><a href="Craftunity.html">Team</a></li>
-        <li><a href="Regeln.html">Regeln</a></li>
+        <li><a href="index">Startseite</a></li>
+        <li><a href="Mods">Mods</a></li>
+        <li><a href="Ranks">Ranke</a></li>
+        <li><a href="Craftunity">Team</a></li>
+        <li><a href="Regeln">Regeln</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
       <h4>Kontakt</h4>
       <ul>
-        <li><a href="Team.html">Team beitreten</a></li>
-        <li><a href="Content.html">Content Rang</a></li>
-        <li><a href="Nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
-        <li><a href="Datenschutz.html">Datenschutzerklärung</a></li>
-        <li><a href="Impressum.html">Impressum</a></li>
+        <li><a href="Team">Team beitreten</a></li>
+        <li><a href="Content">Content Rang</a></li>
+        <li><a href="Nutzungsbedingungen">Nutzungsbedingungen</a></li>
+        <li><a href="Datenschutz">Datenschutzerklärung</a></li>
+        <li><a href="Impressum">Impressum</a></li>
       </ul>
     </div>
   </div>
