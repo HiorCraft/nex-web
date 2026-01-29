@@ -9,9 +9,9 @@ document.getElementById("header").innerHTML = `
         </div>
 
         <nav>
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="./" class="nav-link">Home</a>
             <a href="News.html" class="nav-link">News</a>
-            <a href="Ranks.html" class="nav-link">Ranks</a>
+            <a href="Ranks" class="nav-link">Ranks</a>
         </nav>
 
     </div>
