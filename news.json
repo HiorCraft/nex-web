@@ -1,20 +1,18 @@
 [
   {
-    "type": "Event",
-    "date": "2026-01-10",
-    "title": "Nächste Stream Event",
-    "text": "Ist bald wieder soweit! Meldet euch an."
+    "title": "Winterevent auf Craftunity",
+    "slug": "winterevent-2025",
+    "category": "Event",
+    "date": "07.12.2025",
+    "description": "Schnee, Quests und exklusive Belohnungen – erlebe das Winterevent auf Craftunity.",
+    "image": "assets/img/news/winterevent.jpg"
   },
   {
-    "type": "Update",
-    "date": "2026-01-18",
-    "title": "Lobby-Update",
-    "text": "Neue Lobby mit neue Möglichkeiten."
-  },
-  {
-    "type": "Info",
-    "date": "2026-01-23",
-    "title": "Server Namensänderung",
-    "text": "Hexoria ist jetzt geboren"
+    "title": "Neues Skyblock-Update",
+    "slug": "skyblock-update",
+    "category": "Update",
+    "date": "25.11.2025",
+    "description": "Große Änderungen an unserem Skyblock – neue Inseln, Features und Balancing.",
+    "image": "assets/img/news/skyblock.jpg"
   }
 ]

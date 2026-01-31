@@ -13,50 +13,22 @@
 </head>
 <body>
 
-<section id="news">
-    <div class="container">
-        <h2 class="section__title">Aktuelle News</h2>
-
-        <div class="grid grid-3" id="news-container"></div>
-
-        <script>
-            fetch("news.json")
-                .then(r => r.json())
-                .then(news => {
-                    const container = document.getElementById("news-container");
-                    container.innerHTML = "";
-
-                    // Neueste zuerst sortieren
-                    news.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-                    news.forEach(n => {
-                        container.innerHTML += `
-            <article class="card">
-                <div class="small muted">${n.type} • ${n.date}</div>
-                <h3 style="margin:.5rem 0">${n.title}</h3>
-                <p class="small muted">${n.text}</p>
-            </article>
-            `;
-                    });
-                })
-                .catch(err => {
-                    console.error("Fehler beim Laden der News:", err);
-                });
-        </script>
+<section id="news" class="container">
+    <div class="heading-box">
+        <h1 class="section__title">News & Updates</h1>
+        <p class="small muted">Bleib auf dem Laufenden über Craftunity.</p>
     </div>
+
+    <div class="news-filters">
+        <button class="filter-btn active" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="Event">Events</button>
+        <button class="filter-btn" data-filter="Update">Updates</button>
+        <button class="filter-btn" data-filter="Devblog">Devblogs</button>
+    </div>
+
+    <div id="news-list" class="news-grid"></div>
 </section>
 
-<section id="discord-cta">
-    <div class="container">
-        <div class="discord-card" role="region" aria-label="Discord">
-            <div>
-                <h3>Tritt unserem Discord bei</h3>
-                <p class="small">Sei Teil der Community, erhalte Support und Event‑Ankündigungen.</p>
-            </div>
-            <a class="btn btn--discord" id="discord" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">Discord beitreten</a>
-        </div>
-    </div>
-</section>
 
 <footer id="footer"></footer>
 <script src="footer.js"></script>
