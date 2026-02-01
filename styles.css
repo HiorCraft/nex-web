@@ -56,11 +56,6 @@ header.site-header {
     justify-content: space-between;
     padding: .75rem 0;
 }
-
-/*
-   Branding (Logo + Name)
-*/
-
 /*
    Navigation Menu
 */
@@ -344,9 +339,8 @@ section { padding: 2rem 0; }
     font-size: 0.85rem;
 }
 .logo img {
-    height: 200px;
-    width: auto;
-    transition: transform 0.2s ease;
+    height: 120px;
+    max-height: 12vw;
 }
 
 .logo img:hover {
