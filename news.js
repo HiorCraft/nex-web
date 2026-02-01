@@ -1,3 +1,5 @@
+let allNews = [];
+
 fetch("news.json")
     .then(res => res.json())
     .then(news => {
@@ -22,38 +24,49 @@ function renderNews(list) {
                 </div>
                 <h2 class="news-title">${entry.title}</h2>
                 <p class="small muted">${entry.description}</p>
+
+                <span class="news-toggle">Mehr anzeigen</span>
+
+                <div class="news-extra">
+                    ${entry.longtext}
+                </div>
             </div>
         `;
-        card.addEventListener("click", () => {
-            openNewsPopup(entry);
+
+        card.querySelector(".news-toggle").addEventListener("click", () => {
+
+            document.querySelectorAll(".news-card.open").forEach(openCard => {
+                if (openCard !== card) {
+                    openCard.classList.remove("open");
+                    openCard.querySelector(".news-toggle").textContent = "Mehr anzeigen";
+                }
+            });
+
+            card.classList.toggle("open");
+
+            const toggle = card.querySelector(".news-toggle");
+            toggle.textContent = card.classList.contains("open")
+                ? "Weniger anzeigen"
+                : "Mehr anzeigen";
         });
 
         container.appendChild(card);
     });
 }
 
-function openNewsPopup(entry) {
-    const popup = document.getElementById("news-popup");
-    const inner = document.getElementById("popup-inner");
+document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
 
-    inner.innerHTML = `
-        <h1>${entry.title}</h1>
-        <p class="small muted">${entry.date} • ${entry.category}</p>
-        <img src="${entry.image}" alt="${entry.title}">
-        ${entry.longtext}
-    `;
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
 
-    popup.style.display = "flex";
-}
+        const filter = btn.dataset.filter;
 
-// Popup schließen
-document.querySelector(".popup-close").addEventListener("click", () => {
-    document.getElementById("news-popup").style.display = "none";
-});
-
-// Klick auf Hintergrund schließt Popup
-document.getElementById("news-popup").addEventListener("click", (e) => {
-    if (e.target.id === "news-popup") {
-        e.target.style.display = "none";
-    }
+        if (filter === "all") {
+            renderNews(allNews);
+        } else {
+            const filtered = allNews.filter(n => n.category === filter);
+            renderNews(filtered);
+        }
+    });
 });

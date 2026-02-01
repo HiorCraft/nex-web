@@ -4,15 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="images/logo.png">
-    <title>Hexoria – News</title>
+    <title>Hexoria – Impressum</title>
+
 
     <link rel="stylesheet" href="styles.css">
-    <script src="header.js" defer></script>
+    <header id="header"></header>
+    <script src="header.js"></script>
 </head>
 <body>
-
-<header id="header"></header>
-
 
 <section id="news" class="container">
     <div class="heading-box">
@@ -30,18 +29,8 @@
     <div id="news-list" class="news-grid"></div>
 </section>
 
-<div id="news-popup" class="news-popup">
-    <div class="news-popup-content">
-        <span class="popup-close">×</span>
-        <div id="popup-inner"></div>
-    </div>
-</div>
-
 <footer id="footer"></footer>
 <script src="footer.js" defer></script>
-<script src="news.js" defer></script>
-
-
 <script>
     const currentPage = window.location.pathname.split("/").pop();
     document.querySelectorAll(".nav-link").forEach(link => {
