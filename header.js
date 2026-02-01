@@ -3,7 +3,7 @@ document.getElementById("header").innerHTML = `
     <div class="container nav">
 
         <div class="brand">
-            <a href="index.html" class="logo" aria-label="Craftunity Netzwerk">
+            <a href="index" class="logo" aria-label="Craftunity Netzwerk">
                 <img src="images/logo.png" alt="Craftunity Logo">
             </a>
         </div>
