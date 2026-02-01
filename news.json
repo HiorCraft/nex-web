@@ -1,20 +1,20 @@
 [
   {
-    "title": "Christmas Event 2025",
-    "slug": "christmas-event-2025",
+    "title": "Erste PvP Event",
+    "slug": "event-2026",
     "category": "Event",
-    "date": "07.12.2026",
-    "description": "Winterliches Event mit Quests und Belohnungen.",
-    "image": "images/news/image.png",
-    "longtext": "<p>Willkommen zum Event!</p><img src='images/news/image.png'>"
+    "date": "31.01.2026",
+    "description": "Das erste PvP Event auf dem Server!",
+    "image": "images/news/event_pvp_01.png",
+    "longtext": "<p>Kurz Es war das Erste Event auf den Server und hatte paar bugs von Dev Team und extern.<p>Die Bugs sind schon Notiert und werden im nächsten Event gefixt.<p> Das Event Kommt nochmal und wird besser als das Erste mal.<p>Danke an alle die Teilgenommen haben!"
   },
   {
-    "title": "Christmas Event 2025",
-    "slug": "christmas-event-2025-2",
-    "category": "Event",
-    "date": "07.12.2025",
-    "description": "Winterliches Event mit Quests und Belohnungen.",
-    "image": "assets/img/news/winterevent.jpg",
-    "longtext": "<p>Willkommen zum großen Christmas Event!</p><img src='assets/img/news/winterevent-big.jpg'><h2>Neue Quests</h2><p>Dieses Jahr gibt es ein komplett neues Quest-System.</p><img src='assets/img/news/winterevent-map.jpg'>"
+    "title": "Devblog #1 - Endlich News!",
+    "slug": "devblog-1",
+    "category": "Devblog",
+    "date": "1.02.2026",
+    "description": "Erstes Devblog auf dem Server!",
+    "image": "images/news/devblog_01_2026.png",
+    "longtext": "<p>Willkommen zum ersten Devblog auf unserem Server!<p>In diesem Blog werden wir euch regelmäßig über die neuesten Entwicklungen, Updates und Pläne für unseren Server informieren.<p>Wir freuen uns darauf, diese Reise mit euch zu teilen und gemeinsam eine großartige Community aufzubauen!"
   }
 ]
