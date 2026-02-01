@@ -6,17 +6,18 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>Hexoria – News</title>
 
-
     <link rel="stylesheet" href="styles.css">
-    <header id="header"></header>
-    <script src="header.js"></script>
+    <script src="header.js" defer></script>
 </head>
 <body>
+
+<header id="header"></header>
+
 
 <section id="news" class="container">
     <div class="heading-box">
         <h1 class="section__title">News & Updates</h1>
-        <p class="small muted">Bleib auf dem Laufenden über Craftunity.</p>
+        <p class="small muted">Alle Neuigkeiten rund um Craftunity.</p>
     </div>
 
     <div class="news-filters">
@@ -29,9 +30,16 @@
     <div id="news-list" class="news-grid"></div>
 </section>
 
+<div id="news-popup" class="news-popup">
+    <div class="news-popup-content">
+        <span class="popup-close">×</span>
+        <div id="popup-inner"></div>
+    </div>
+</div>
 
 <footer id="footer"></footer>
-<script src="footer.js"></script>
+<script src="footer.js" defer></script>
+<script src="news.js" defer></script>
 
 
 <script>
@@ -42,6 +50,6 @@
         }
     });
 </script>
-
+<script src="news.js"></script>
 </body>
 </html>

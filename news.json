@@ -1,18 +1,20 @@
 [
   {
-    "title": "Devlog 1",
-    "slug": "devlog-2026-1",
-    "category": "Devlog",
-    "date": "01.02.2026",
-    "description": "Einblicke in die Entwicklung unseres Spiels – neue Features, Herausforderungen und Fortschritte.",
-    "image": "images/nautical_content_rank.png"
+    "title": "Christmas Event 2025",
+    "slug": "christmas-event-2025",
+    "category": "Event",
+    "date": "07.12.2026",
+    "description": "Winterliches Event mit Quests und Belohnungen.",
+    "image": "images/news/image.png",
+    "longtext": "<p>Willkommen zum Event!</p><img src='images/news/image.png'>"
   },
   {
-    "title": "Neues Skyblock-Update",
-    "slug": "skyblock-update",
-    "category": "Update",
-    "date": "25.11.2025",
-    "description": "Große Änderungen an unserem Skyblock – neue Inseln, Features und Balancing.",
-    "image": "assets/img/news/skyblock.jpg"
+    "title": "Christmas Event 2025",
+    "slug": "christmas-event-2025-2",
+    "category": "Event",
+    "date": "07.12.2025",
+    "description": "Winterliches Event mit Quests und Belohnungen.",
+    "image": "assets/img/news/winterevent.jpg",
+    "longtext": "<p>Willkommen zum großen Christmas Event!</p><img src='assets/img/news/winterevent-big.jpg'><h2>Neue Quests</h2><p>Dieses Jahr gibt es ein komplett neues Quest-System.</p><img src='assets/img/news/winterevent-map.jpg'>"
   }
 ]
