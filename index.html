@@ -7,7 +7,7 @@
     <title>Hexoria – Home</title>
 
 
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <header id="header"></header>
     <script src="header.js"></script>
 </head>
@@ -63,30 +63,9 @@
 
             <div class="grid grid-3" id="news-container"></div>
 
-            <script>
-                fetch("news.json")
-                    .then(r => r.json())
-                    .then(news => {
-                        const container = document.getElementById("news-container");
-                        container.innerHTML = "";
-
-
-                        news.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-                        news.forEach(n => {
-                            container.innerHTML += `
-            <article class="card">
-                <div class="small muted">${n.type} • ${n.date}</div>
-                <h3 style="margin:.5rem 0">${n.title}</h3>
-                <p class="small muted">${n.text}</p>
-            </article>
-            `;
-                        });
-                    })
-                    .catch(err => {
-                        console.error("Fehler beim Laden der News:", err);
-                    });
-            </script>
+            <div class="news-more-wrapper">
+                <a class="btn" href="News">Alle News ansehen</a>
+            </div>
         </div>
     </section>
 
@@ -129,7 +108,6 @@
         }
     </script>
 
-
     <section id="premium">
         <div class="container premium-flex">
             <div class="premium-text">
@@ -148,7 +126,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="server">
         <div class="container flex-row">
@@ -186,7 +163,6 @@
 
     <footer id="footer"></footer>
     <script src="footer.js"></script>
-
 
     <script>
         (function(){
@@ -244,6 +220,34 @@
                 link.classList.add("active");
             }
         });
+    </script>
+
+    <script>
+        fetch("news.json")
+            .then(r => r.json())
+            .then(news => {
+                const container = document.getElementById("news-container");
+                container.innerHTML = "";
+
+
+                news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+
+                news.slice(0, 3).forEach(n => {
+                    container.innerHTML += `
+                <article class="news-card">
+                    <div class="news-card-image" style="background-image:url('${n.image}')"></div>
+
+                    <div class="news-card-content">
+                        <div class="small muted">${n.category} • ${n.date}</div>
+                        <h3>${n.title}</h3>
+                        <p class="small muted">${n.description}</p>
+                    </div>
+                </article>
+            `;
+                });
+            })
+            .catch(err => console.error("Fehler beim Laden der News:", err));
     </script>
 </body>
 </html>
