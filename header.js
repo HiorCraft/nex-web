@@ -4,7 +4,7 @@ document.getElementById("header").innerHTML = `
 
         <div class="brand">
             <a href="index" class="logo" aria-label="Craftunity Netzwerk">
-                <img src="images/logo.png" alt="Craftunity Logo">
+                <img src="images/icon/logo.png" alt="Craftunity Logo">
             </a>
         </div>
 

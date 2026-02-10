@@ -2,7 +2,7 @@ document.getElementById("footer").innerHTML = `
   <div class="container footer-grid">
 
     <a href="index" class="logo">
-      <img src="images/logo.png" alt="Craftunity Logo">
+      <img src="images/icon/logo.png" alt="Craftunity Logo">
     </a>
 
     <div class="footer-section">

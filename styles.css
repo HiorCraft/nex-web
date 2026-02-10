@@ -517,6 +517,12 @@ section { padding: 2rem 0; }
     border-radius: 6px;
     image-rendering: pixelated;
 }
+.rank-icon {
+    width: auto;
+    height: 32px; /* passt für 30x16 UND 114x16 */
+    object-fit: contain;
+    margin-right: 1rem;
+}
 /*
     GitHub Logo and Icon Styles
  */
@@ -612,7 +618,6 @@ nav {
 /*
     Mods Card Styles
  */
-/* Container für die Mod-Karten */
 .mod-card-wrapper {
     padding: 2rem;
     max-width: 900px;
