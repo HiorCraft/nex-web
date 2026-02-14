@@ -3,6 +3,10 @@ let allNews = [];
 fetch("news.json")
     .then(res => res.json())
     .then(news => {
+
+        // News nach Datum sortieren (neu → alt)
+        news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
         allNews = news;
         renderNews(news);
     });
@@ -33,8 +37,10 @@ function renderNews(list) {
             </div>
         `;
 
+        // Toggle-Logik
         card.querySelector(".news-toggle").addEventListener("click", () => {
 
+            // Alle anderen schließen
             document.querySelectorAll(".news-card.open").forEach(openCard => {
                 if (openCard !== card) {
                     openCard.classList.remove("open");
@@ -42,8 +48,10 @@ function renderNews(list) {
                 }
             });
 
+            // Diese Card toggeln
             card.classList.toggle("open");
 
+            // Button-Text anpassen
             const toggle = card.querySelector(".news-toggle");
             toggle.textContent = card.classList.contains("open")
                 ? "Weniger anzeigen"
@@ -54,6 +62,7 @@ function renderNews(list) {
     });
 }
 
+// FILTER
 document.querySelectorAll(".filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
 
