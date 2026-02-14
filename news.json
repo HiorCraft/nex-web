@@ -9,6 +9,15 @@
     "longtext": "<p>Kurz Es war das Erste Event auf den Server und hatte paar bugs von Dev Team und extern.<p>Die Bugs sind schon Notiert und werden im nächsten Event gefixt.<p> Das Event Kommt nochmal und wird besser als das Erste mal.<p>Danke an alle die Teilgenommen haben!"
   },
   {
+    "title": "Devblog #2 - Gradle Problem",
+    "slug": "devblog-2",
+    "category": "Devblog",
+    "date": "14.02.2026",
+    "description": "Gradle Problem ist immer noch nicht behoben!",
+    "image": "images/news/devblog_02_2026.png",
+    "longtext": "<p>Leider haben wir immer noch Probleme mit Gradle, was die Entwicklung und das Testen von Updates erschwert. Wir arbeiten intensiv daran, dieses Problem zu beheben, und hoffen, dass es bald gelöst sein wird.<p>Wir entschuldigen uns für die Unannehmlichkeiten und danken euch für eure Geduld und Unterstützung während dieser Zeit!<p> Der Zeit können wir nicht weiter entwickeln, aber wir arbeiten daran das Problem zu beheben und hoffen das es bald gelöst ist!"
+  },
+  {
     "title": "Devblog #1 - Endlich News!",
     "slug": "devblog-1",
     "category": "Devblog",
