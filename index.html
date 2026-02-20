@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -57,7 +57,30 @@
         </div>
     </div>
 
-    <section id="news">
+    <section id="news" class="container">
+
+        <!-- POPUP -->
+        <div id="news-popup">
+            <div class="popup-content">
+                <span id="popup-close">×</span>
+
+                <img id="popup-image" class="popup-image">
+                <h2 id="popup-title"></h2>
+
+                <p class="small muted">
+                    <span id="popup-category"></span> • <span id="popup-date"></span>
+                </p>
+
+                <div id="popup-body"></div>
+            </div>
+        </div>
+
+        <!-- NEWS LIST -->
+        <div id="news-list" class="news-grid"></div>
+
+    </section>
+
+    <section id="news-preview">
         <div class="container">
             <h2 class="section__title">Aktuelle News</h2>
 
@@ -234,8 +257,6 @@
             }
         });
     </script>
-    // Wartungsmodus Popup
-    // Bald löschen, sobald das Problem behoben ist
     <script>
         const badge = document.getElementById("maintenance-badge");
         const popup = document.getElementById("maintenance-popup");
@@ -254,35 +275,6 @@
                 popup.classList.remove("active");
             }
         });
-    </script>
-
-
-    <script>
-        fetch("news.json")
-            .then(r => r.json())
-            .then(news => {
-                const container = document.getElementById("news-container");
-                container.innerHTML = "";
-
-
-                news.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-
-                news.slice(0, 3).forEach(n => {
-                    container.innerHTML += `
-                <article class="news-card">
-                    <div class="news-card-image" style="background-image:url('${n.image}')"></div>
-
-                    <div class="news-card-content">
-                        <div class="small muted">${n.category} • ${n.date}</div>
-                        <h3>${n.title}</h3>
-                        <p class="small muted">${n.description}</p>
-                    </div>
-                </article>
-            `;
-                });
-            })
-            .catch(err => console.error("Fehler beim Laden der News:", err));
     </script>
 </body>
 </html>

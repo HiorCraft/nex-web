@@ -4,7 +4,6 @@ fetch("news.json")
     .then(res => res.json())
     .then(news => {
 
-        // News nach Datum sortieren (neu → alt)
         news.sort((a, b) => new Date(b.date) - new Date(a.date));
 
         allNews = news;
@@ -21,48 +20,54 @@ function renderNews(list) {
 
         card.innerHTML = `
             <div class="news-image" style="background-image:url('${entry.image}')"></div>
+
             <div class="news-content">
                 <div class="news-meta">
                     <span class="news-badge">${entry.category}</span>
                     <span class="news-date">${entry.date}</span>
                 </div>
+
                 <h2 class="news-title">${entry.title}</h2>
+
                 <p class="small muted">${entry.description}</p>
 
                 <span class="news-toggle">Mehr anzeigen</span>
-
-                <div class="news-extra">
-                    ${entry.longtext}
-                </div>
             </div>
         `;
 
-        // Toggle-Logik
         card.querySelector(".news-toggle").addEventListener("click", () => {
-
-            // Alle anderen schließen
-            document.querySelectorAll(".news-card.open").forEach(openCard => {
-                if (openCard !== card) {
-                    openCard.classList.remove("open");
-                    openCard.querySelector(".news-toggle").textContent = "Mehr anzeigen";
-                }
-            });
-
-            // Diese Card toggeln
-            card.classList.toggle("open");
-
-            // Button-Text anpassen
-            const toggle = card.querySelector(".news-toggle");
-            toggle.textContent = card.classList.contains("open")
-                ? "Weniger anzeigen"
-                : "Mehr anzeigen";
+            openPopup(entry);
         });
 
         container.appendChild(card);
     });
 }
 
-// FILTER
+function openPopup(entry) {
+
+    document.getElementById("popup-title").textContent = entry.title;
+
+    document.getElementById("popup-date").textContent = entry.date;
+
+    document.getElementById("popup-category").textContent = entry.category;
+
+    document.getElementById("popup-body").innerHTML = entry.longtext;
+
+    document.getElementById("popup-image").src = entry.image;
+
+    document.getElementById("news-popup").classList.add("active");
+}
+
+document.getElementById("popup-close").addEventListener("click", () => {
+    document.getElementById("news-popup").classList.remove("active");
+});
+
+document.getElementById("news-popup").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.classList.remove("active");
+    }
+});
+
 document.querySelectorAll(".filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
 

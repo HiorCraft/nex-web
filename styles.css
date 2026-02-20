@@ -817,33 +817,67 @@ nav {
 .news-toggle:hover {
     text-decoration: underline;
 }
-.news-card {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform .15s ease, box-shadow .15s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
 .news-card-image {
     height: 160px;
     background-size: cover;
     background-position: center;
 }
-
 .news-card-content {
     padding: 1rem;
 }
-
 .news-more-wrapper {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+}
+#news-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+#news-popup.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.popup-content {
+    background: #111;
+    border: 1px solid #222;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;
+}
+#news-popup.active .popup-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+#popup-close {
+    float: right;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+    margin-top: -20px;
+}
+
+.popup-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 /*
@@ -863,18 +897,13 @@ nav {
     z-index: 9999;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
 
-    /* Animation */
     animation: pulse 1.8s infinite ease-in-out;
 }
-
-/* Pulsierende Animation */
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 10px rgba(198,40,40,0.4); }
     50% { transform: scale(1.05); box-shadow: 0 0 18px rgba(198,40,40,0.7); }
     100% { transform: scale(1); box-shadow: 0 0 10px rgba(198,40,40,0.4); }
 }
-
-/* Popup Hintergrund */
 #maintenance-popup {
     position: fixed;
     inset: 0;
@@ -888,14 +917,10 @@ nav {
     pointer-events: none;
     transition: opacity .3s ease;
 }
-
-/* Popup sichtbar */
 #maintenance-popup.active {
     opacity: 1;
     pointer-events: all;
 }
-
-/* Popup Box */
 .popup-content {
     background: #111;
     border: 1px solid #222;
@@ -910,13 +935,10 @@ nav {
     opacity: 0;
     transition: transform .3s ease, opacity .3s ease;
 }
-
-/* Popup Box sichtbar */
 #maintenance-popup.active .popup-content {
     transform: translateY(0);
     opacity: 1;
 }
-
 #popup-close {
     margin-top: 1rem;
     padding: .5rem 1rem;
