@@ -6,7 +6,7 @@ document.getElementById("footer").innerHTML = `
     </a>
 
     <div class="footer-section">
-      <h4>Craftunity</h4>
+      <h4>Hexoria</h4>
       <p class="small muted">
         Ein Minecraft‑Netzwerk für Abenteuer, Community und Kreativität.
       </p>
@@ -17,7 +17,7 @@ document.getElementById("footer").innerHTML = `
       <ul>
         <li><a href="index">Startseite</a></li>
         <li><a href="Mods">Mods</a></li>
-        <li><a href="Ranks">Ranke</a></li>
+        <li><a href="Ranks">Ränge</a></li>
         <li><a href="Craftunity">Team</a></li>
         <li><a href="Regeln">Regeln</a></li>
       </ul>
@@ -28,7 +28,6 @@ document.getElementById("footer").innerHTML = `
       <ul>
         <li><a href="Team">Team beitreten</a></li>
         <li><a href="Content">Content Rang</a></li>
-        <li><a href="Nutzungsbedingungen">Nutzungsbedingungen</a></li>
         <li><a href="Datenschutz">Datenschutzerklärung</a></li>
         <li><a href="Impressum">Impressum</a></li>
       </ul>

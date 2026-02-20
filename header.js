@@ -11,7 +11,7 @@ document.getElementById("header").innerHTML = `
         <nav>
             <a href="index" class="nav-link">Home</a>
             <a href="News" class="nav-link">News</a>
-            <a href="Ranks" class="nav-link">Ranks</a>
+            <a href="Ranks" class="nav-link">Ränge</a>
         </nav>
 
     </div>
