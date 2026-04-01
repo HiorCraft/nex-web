@@ -1,1 +1,1 @@
-# https://hexoria.net
+# [Hexoria.net](https://hexoria.net)
