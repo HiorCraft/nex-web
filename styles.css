@@ -689,35 +689,136 @@ nav {
 /*
     Support Card Styles
  */
-.ticket-types-column {
+
+/* Grundlayout Support-Seite */
+.support-page {
+    margin-top: 3rem;
+    animation: zoomFade .5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes zoomFade {
+    from { opacity: 0; transform: scale(.97); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.support-title {
+    font-size: 2.6rem;
+    margin-bottom: .5rem;
+}
+
+.support-subtitle {
+    opacity: .85;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.chapter-title {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* Tabs */
+.tabs {
+    margin-top: 1rem;
+}
+
+.tab-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 600px;
-    margin: 1.5rem auto;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1rem;
 }
 
-.ticket-type {
-    padding: 1.2rem 1.4rem;
+.tab-buttons button {
+    background: #111;
+    border: 1px solid #222;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, color .2s ease;
+}
+
+.tab-buttons button:hover {
+    box-shadow: 0 0 12px rgba(0, 230, 118, 0.4);
+}
+
+.tab-buttons button.active {
+    background: #00e676;
+    color: #000;
+    border-color: #00e676;
+}
+
+.tab-buttons button.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #00e676;
+    animation: underline .25s ease forwards;
+}
+
+@keyframes underline {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+
+
+.tab-content {
+    display: none;
+    background: #111;
+    border: 1px solid #222;
+    padding: 1.5rem;
     border-radius: 12px;
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    transition: transform .15s ease, background .15s ease;
+    margin-bottom: 1rem;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .25s ease, transform .25s ease;
 }
 
-.ticket-type:hover {
-    transform: translateY(-4px);
-    background: #222;
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.ticket-blue { border-left: 4px solid #4dabf7; }
-.ticket-green { border-left: 4px solid #00e676; }
-.ticket-yellow { border-left: 4px solid #ffd43b; }
-
-.ticket-type h4 {
-    margin: 0 0 .4rem 0;
-    font-size: 1.2rem;
+.alert {
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    line-height: 1.5;
+    animation: fadeInAlert .4s ease forwards;
+    opacity: 0;
 }
+
+@keyframes fadeInAlert {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.alert.warning {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+}
+
+.alert.note {
+    background: rgba(0, 230, 118, 0.1);
+    border-left: 4px solid #00e676;
+}
+
+.support-steps {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+
 /*
     News Styles
  */
@@ -833,7 +934,8 @@ nav {
 #news-popup {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px); /* Glass Blur */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -843,111 +945,41 @@ nav {
     pointer-events: none;
     transition: opacity .3s ease;
 }
-#news-popup.active {
-    opacity: 1;
-    pointer-events: all;
-}
+
 .popup-content {
-    background: #111;
-    border: 1px solid #222;
-    padding: 1.5rem;
-    border-radius: 12px;
+    background: rgba(20,20,20,0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 1.8rem;
+    border-radius: 16px;
     width: 90%;
-    max-width: 600px;
+    max-width: 620px;
     max-height: 80vh;
     overflow-y: auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 
     transform: translateY(20px);
     opacity: 0;
-    transition: transform .3s ease, opacity .3s ease;
+    transition: transform .35s ease, opacity .35s ease;
 }
+
 #news-popup.active .popup-content {
     transform: translateY(0);
     opacity: 1;
 }
-#popup-close {
-    float: right;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #fff;
-    margin-top: -20px;
-}
-
-.popup-image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-/*
-    maintenance-badge
- */
-/* Badge links oben */
-#maintenance-badge {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    background: #c62828;
-    color: white;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    border-radius: 6px;
-    cursor: pointer;
-    z-index: 9999;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-
-    animation: pulse 1.8s infinite ease-in-out;
-}
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 10px rgba(198,40,40,0.4); }
-    50% { transform: scale(1.05); box-shadow: 0 0 18px rgba(198,40,40,0.7); }
-    100% { transform: scale(1); box-shadow: 0 0 10px rgba(198,40,40,0.4); }
-}
-#maintenance-popup {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s ease;
-}
-#maintenance-popup.active {
+#news-popup.active {
     opacity: 1;
-    pointer-events: all;
+    transition: opacity .35s ease;
 }
-.popup-content {
-    background: #111;
-    border: 1px solid #222;
-    padding: 1.5rem;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 420px;
+
+
+.footer-note {
+    opacity: .55;
+    font-size: .85rem;
+    margin-top: .8rem;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
 
-    transform: translateY(-20px);
-    opacity: 0;
-    transition: transform .3s ease, opacity .3s ease;
-}
-#maintenance-popup.active .popup-content {
-    transform: translateY(0);
-    opacity: 1;
-}
-#popup-close {
-    margin-top: 1rem;
-    padding: .5rem 1rem;
-    background: #c62828;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
 
 
 

@@ -2,7 +2,7 @@ document.getElementById("footer").innerHTML = `
   <div class="container footer-grid">
 
     <a href="index" class="logo">
-      <img src="images/icon/logo.png" alt="Craftunity Logo">
+      <img src="images/icon/logo.png" alt="Hexoria Logo">
     </a>
 
     <div class="footer-section">
@@ -32,9 +32,11 @@ document.getElementById("footer").innerHTML = `
         <li><a href="Impressum">Impressum</a></li>
       </ul>
     </div>
+
   </div>
 
   <div class="footer-bottom">
-    <p>© Copyright 2025 - 2026 Hexoria</p>
+    <p>© 2025 - 2026 Hexoria</p>
+    <p class="footer-note">Teile dieser Website wurden mit Unterstützung von KI erstellt und anschließend manuell überarbeitet.</p>
   </div>
 `;
