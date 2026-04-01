@@ -59,7 +59,6 @@
 
     <section id="news" class="container">
 
-        <!-- POPUP -->
         <div id="news-popup">
             <div class="popup-content">
                 <span id="popup-close">×</span>
@@ -75,36 +74,8 @@
             </div>
         </div>
 
-        <!-- NEWS LIST -->
         <div id="news-list" class="news-grid"></div>
-
     </section>
-
-    <section id="news-preview">
-        <div class="container">
-            <h2 class="section__title">Aktuelle News</h2>
-
-            <div class="grid grid-3" id="news-container"></div>
-
-            <div class="news-more-wrapper">
-                <a class="btn" href="News">Alle News ansehen</a>
-            </div>
-        </div>
-    </section>
-
-    <div id="maintenance-badge">Wartungsmodus</div>
-
-    <div id="maintenance-popup">
-        <div class="popup-content">
-            <h2>Wartungsmodus</h2>
-            <p>
-                Wir machen den Server gerade fit für die Zukunft! In Kürze sind wir wieder da,
-                um dir ein noch besseres Spielerlebnis zu bieten. Danke für deine Geduld und bis bald auf Hexoria!
-            </p>
-
-            <button id="popup-close">Schließen</button>
-        </div>
-    </div>
 
     <section id="JoinUs">
         <div class="container flex-row">
@@ -254,25 +225,6 @@
         document.querySelectorAll(".nav-link").forEach(link => {
             if (link.getAttribute("href") === currentPage) {
                 link.classList.add("active");
-            }
-        });
-    </script>
-    <script>
-        const badge = document.getElementById("maintenance-badge");
-        const popup = document.getElementById("maintenance-popup");
-        const closeBtn = document.getElementById("popup-close");
-
-        badge.addEventListener("click", () => {
-            popup.classList.add("active");
-        });
-
-        closeBtn.addEventListener("click", () => {
-            popup.classList.remove("active");
-        });
-
-        popup.addEventListener("click", (e) => {
-            if (e.target === popup) {
-                popup.classList.remove("active");
             }
         });
     </script>
