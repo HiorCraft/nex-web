@@ -13,40 +13,101 @@
 </head>
 <body>
 
-<h3 style="margin-top:2rem; text-align:center;">Ticket‑Arten</h3>
+<section class="container support-page">
 
-<div class="ticket-types-column">
+    <h1 class="support-title">Support</h1>
+    <p class="support-subtitle">
+        Der Support erfolgt <strong>ausschließlich über das Ticket-System im Discord</strong>.<br>
+        Private Nachrichten an Teammitglieder werden nicht bearbeitet.<br>
+        Sprachsupport ist ausgeschlossen.<br>
+        Bei allgemeinen Fragen nutze bitte den Support-Kanal im Discord.
+    </p>
 
-    <div class="ticket-type ticket-blue">
-        <h4>🔵 Discord Support</h4>
-        <ul class="small muted">
-            <li>Ein Spieler melden im Discord</li>
-            <li>Fragen allgemein über den Server</li>
-            <li>Team / Content beitreten</li>
-            <li>Idee für Hexoria</li>
-        </ul>
+    <h2 class="chapter-title">Die verschiedenen Ticket-Typen</h2>
+
+    <!-- TABS -->
+    <div class="tabs">
+
+        <div class="tab-buttons">
+            <button data-tab="survival" class="active">Survival Support</button>
+            <button data-tab="event">Event Support</button>
+            <button data-tab="report">Report</button>
+            <button data-tab="bugreport">Bugreport</button>
+            <button data-tab="unban">Entbannungsantrag</button>
+            <button data-tab="discord">Discord Support</button>
+        </div>
+
+        <!-- TAB CONTENTS -->
+        <div class="tab-content active" id="survival">
+            <p>Wenn du Fragen oder Probleme auf dem Survival-Server hast, öffne ein Survival-Support-Ticket.</p>
+
+            <div class="alert warning">
+                <strong>Erstattung:</strong><br>
+                Erstattungen werden nur gewährt, wenn der Server schuld ist und du es nachweisen kannst.
+                In der Regel wird ein Video benötigt.
+                Nutze ShadowPlay (Nvidia) oder Radeon ReLive (AMD), um die letzten 5 Minuten speichern zu können.
+            </div>
+        </div>
+
+        <div class="tab-content" id="event">
+            <p>Wenn du Probleme oder Fragen zu Events hast, öffne ein Event-Support-Ticket.</p>
+
+            <div class="alert warning">
+                <strong>Erstattung:</strong><br>
+                Auch hier gilt: Erstattungen nur mit Nachweis (Video).
+            </div>
+        </div>
+
+        <div class="tab-content" id="report">
+            <p>Wenn du einen Spieler melden möchtest, Items gestohlen wurden oder Gebäude beschädigt wurden, öffne ein Report-Ticket.</p>
+
+            <div class="alert note">
+                <strong>Hinweis:</strong><br>
+                Bitte fülle das Formular vollständig aus.
+                Wir benötigen genaue Spielernamen und Koordinaten.
+            </div>
+        </div>
+
+        <div class="tab-content" id="bugreport">
+            <p>Wenn du einen Bug gefunden hast, melde ihn bitte im Bugreport-Ticket.
+                Beschreibe genau, was passiert ist und was hätte passieren sollen.
+                Screenshots und Videos sind hilfreich.</p>
+        </div>
+
+        <div class="tab-content" id="unban">
+            <p>Wenn du denkst, dass dein Bann ungerechtfertigt war, öffne ein Entbannungsantrag-Ticket.</p>
+
+            <div class="alert warning">
+                <strong>Wichtig:</strong><br>
+                Wir erwarten einen ehrlichen, selbstgeschriebenen Antrag.
+                KI‑Texte oder Täuschungsversuche führen zur Ablehnung.
+            </div>
+        </div>
+
+        <div class="tab-content" id="discord">
+            <p>Bei Fragen zum Discord oder um einen Benutzer zu melden, öffne ein Discord-Support-Ticket.</p>
+        </div>
+
     </div>
 
-    <div class="ticket-type ticket-green">
-        <h4>🟢 Minecraft Support</h4>
-        <ul class="small muted">
-            <li>Fragen Über den Minecraft Network</li>
-            <li>Ein Spieler melden in Minecraft</li>
-            <li>Mods prüfen lassen </li>
-            <li>Idee für den Minecraft Network</li>
-        </ul>
+    <h2 class="chapter-title">Wie öffne ich ein Support-Ticket?</h2>
+
+    <ol class="support-steps">
+        <li>Öffne im Discord den Ticket-Kanal.</li>
+        <li>Klicke auf den Button unter der Nachricht.</li>
+        <li>Wähle die passende Ticket-Kategorie.</li>
+        <li>Fülle das Formular vollständig aus.</li>
+        <li>Beschreibe dein Problem so genau wie möglich.</li>
+    </ol>
+
+    <div class="alert note">
+        <strong>Bitte habe etwas Geduld!</strong><br>
+        Das Team arbeitet freiwillig. Unter der Woche kann es länger dauern, bis dein Ticket bearbeitet wird.
     </div>
 
-    <div class="ticket-type ticket-yellow">
-        <h4>🟡 Bug Report</h4>
-        <ul class="small muted">
-            <li>Problem bei den Bot im Discord</li>
-            <li>Minecraft Bugs / Problem</li>
-            <li>Webseite Bugs / Problem</li>
-        </ul>
-    </div>
+</section>
 
-</div>
+
 
 <footer id="footer"></footer>
 <script src="footer.js"></script>
