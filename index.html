@@ -6,16 +6,16 @@
     <link rel="icon" type="image/png" href="images/icon/logo.png" />
     <title>Hexoria – Home</title>
 
-
     <link rel="stylesheet" href="styles.css">
-    <header id="header"></header>
-    <script src="header.js"></script>
 </head>
 <body>
 
+<header id="header"></header>
+<script src="header.js"></script>
+
+<!-- Gallery / Slideshow -->
 <section id="gallery">
     <div class="container">
-
         <div class="slideshow" aria-roledescription="carousel">
             <div class="slides" id="slides">
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="1 von 3">
@@ -56,120 +56,6 @@
             </div>
         </div>
     </div>
-
-    <section id="news" class="container">
-
-        <div id="news-popup">
-            <div class="popup-content">
-                <span id="popup-close">×</span>
-
-                <img id="popup-image" class="popup-image">
-                <h2 id="popup-title"></h2>
-
-                <p class="small muted">
-                    <span id="popup-category"></span> • <span id="popup-date"></span>
-                </p>
-
-                <div id="popup-body"></div>
-            </div>
-        </div>
-
-        <div id="news-list" class="news-grid"></div>
-    </section>
-
-    <section id="JoinUs">
-        <div class="container flex-row">
-            <div class="joinus__image">
-                <img src="images/home/WEB_premuim.webp" alt="Rubin-Promo" style="max-width:500px; height:auto;" />
-            </div>
-
-            <div class="server__text">
-                <h2 class="section__title">Zeig, wer du bist</h2>
-                <p class="small muted">
-                    Tritt dem Hexoria Netzwerk bei und erlebe spannende Abenteuer,
-                    baue beeindruckende Strukturen und knüpfe Freundschaften
-                    in einer lebendigen Community.
-                </p>
-
-                <div style="height:.75rem"></div>
-
-                <a class="btn" href="#" onclick="copyIP(); return false;">
-                    Join uns
-                </a>
-            </div>
-        </div>
-
-        <div id="copy-toast">Server-IP kopiert!</div>
-    </section>
-
-    <script>
-        function copyIP() {
-            navigator.clipboard.writeText("play.Hexoria.net");
-
-            const toast = document.getElementById("copy-toast");
-            toast.classList.add("show");
-
-            setTimeout(() => {
-                toast.classList.remove("show");
-            }, 2500);
-        }
-    </script>
-
-    <section id="premium">
-        <div class="container premium-flex">
-            <div class="premium-text">
-                <h2 class="section__title">Premium Rang</h2>
-                <p class="small muted">
-                    Sichere dir jetzt Premium und habe mehr spaß mit deine Freunde.
-                    Mit Tollen Vorteile zum beispiele Prioritäts‑Queue und Unterstütze uns für weitere Feats!
-                </p>
-                <div style="height:.75rem"></div>
-                <a class="btn" href="Ranks" target="_blank" rel="noopener">
-                    Zur Rangübersicht
-                </a>
-            </div>
-            <div class="premium-image">
-                <img src="images/home/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
-            </div>
-        </div>
-    </section>
-
-    <section id="server">
-        <div class="container flex-row">
-            <div class="server__image">
-                <img src="images/home/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
-            </div>
-            <div class="server__text">
-                <h2 class="section__title">Über uns</h2>
-                <p class="small muted">
-                    Erfahre mehr über das Team und die Geschichte hinter dem Hexoria Netzwerk.
-                    Wie es bist Jetzt geschaft haben, den Server zu Treiben.
-                </p>
-                <div style="height:.75rem"></div>
-                <a class="btn" href="Craftunity" target="_blank" rel="noopener">Mehr erfahren</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="discord-cta">
-        <div class="container">
-            <div class="discord-card" role="region" aria-label="Discord">
-                <div>
-                    <h3>Tritt unserem Discord bei</h3>
-                    <p class="small">Sei Teil der Community, erhalte Support und Event‑Ankündigungen.</p>
-                </div>
-
-                <a class="btn btn--discord" id="discord"
-                   href="https://discord.gg/cU8tt3QsUp"
-                   target="_blank" rel="noopener">
-                    Discord beitreten
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer id="footer"></footer>
-    <script src="footer.js"></script>
 
     <script>
         (function(){
@@ -220,13 +106,208 @@
             slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
         })();
     </script>
-    <script>
-        const currentPage = window.location.pathname.split("/").pop();
-        document.querySelectorAll(".nav-link").forEach(link => {
-            if (link.getAttribute("href") === currentPage) {
-                link.classList.add("active");
+</section>
+
+<!-- News (Startseite zeigt nur Top 3 via news.js event) -->
+<section id="news" class="container">
+
+    <div id="news-popup">
+        <div class="popup-content">
+            <span id="popup-close">×</span>
+
+            <img id="popup-image" class="popup-image" src="" alt="News Bild">
+            <h2 id="popup-title"></h2>
+
+            <p class="small muted">
+                <span id="popup-category"></span> • <span id="popup-date"></span>
+            </p>
+
+            <div id="popup-body"></div>
+        </div>
+    </div>
+
+    <div id="news-list" class="news-grid"></div>
+
+    <div class="news-more-center">
+        <a id="news-more-btn" class="btn" href="News">Weiter lesen</a>
+    </div>
+
+</section>
+
+<!-- Join Us -->
+<section id="JoinUs">
+    <div class="container flex-row">
+        <div class="joinus__image">
+            <img src="images/home/WEB_premuim.webp" alt="Rubin-Promo" style="max-width:500px; height:auto;" />
+        </div>
+
+        <div class="server__text">
+            <h2 class="section__title">Zeig, wer du bist</h2>
+            <p class="small muted">
+                Tritt dem Hexoria Netzwerk bei und erlebe spannende Abenteuer,
+                baue beeindruckende Strukturen und knüpfe Freundschaften
+                in einer lebendigen Community.
+            </p>
+
+            <div style="height:.75rem"></div>
+
+            <a class="btn" href="#" onclick="copyIP(); return false;">
+                Join uns
+            </a>
+        </div>
+    </div>
+
+    <div id="copy-toast">Server-IP kopiert!</div>
+</section>
+
+<script>
+    function copyIP() {
+        navigator.clipboard.writeText("play.Hexoria.net");
+
+        const toast = document.getElementById("copy-toast");
+        toast.classList.add("show");
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2500);
+    }
+</script>
+
+<!-- Premium -->
+<section id="premium">
+    <div class="container premium-flex">
+        <div class="premium-text">
+            <h2 class="section__title">Premium Rang</h2>
+            <p class="small muted">
+                Sichere dir jetzt Premium und habe mehr spaß mit deine Freunde.
+                Mit Tollen Vorteile zum beispiele Prioritäts‑Queue und Unterstütze uns für weitere Feats!
+            </p>
+            <div style="height:.75rem"></div>
+            <a class="btn" href="Ranks" target="_blank" rel="noopener">
+                Zur Rangübersicht
+            </a>
+        </div>
+        <div class="premium-image">
+            <img src="images/home/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+        </div>
+    </div>
+</section>
+
+<!-- Server -->
+<section id="server">
+    <div class="container flex-row">
+        <div class="server__image">
+            <img src="images/home/premium_user_watch.webp" alt="Rubin-Promo" style="max-width:300px; height:auto;" />
+        </div>
+        <div class="server__text">
+            <h2 class="section__title">Über uns</h2>
+            <p class="small muted">
+                Erfahre mehr über das Team und die Geschichte hinter dem Hexoria Netzwerk.
+                Wie es bist Jetzt geschaft haben, den Server zu Treiben.
+            </p>
+            <div style="height:.75rem"></div>
+            <a class="btn" href="Craftunity" target="_blank" rel="noopener">Mehr erfahren</a>
+        </div>
+    </div>
+</section>
+
+<!-- Discord CTA -->
+<section id="discord-cta">
+    <div class="container">
+        <div class="discord-card" role="region" aria-label="Discord">
+            <div>
+                <h3>Tritt unserem Discord bei</h3>
+                <p class="small">Sei Teil der Community, erhalte Support und Event‑Ankündigungen.</p>
+            </div>
+
+            <a class="btn btn--discord" id="discord"
+               href="https://discord.gg/cU8tt3QsUp"
+               target="_blank" rel="noopener">
+                Discord beitreten
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer id="footer"></footer>
+<script src="footer.js"></script>
+
+<script>
+    (function(){
+        const slidesEl = document.getElementById('slides');
+        const slides = slidesEl ? Array.from(slidesEl.children) : [];
+        const dotsEl = document.getElementById('dots');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let idx = 0, autoplay = true, interval = 4500, timer;
+
+        function renderDots(){
+            if(!dotsEl) return;
+            dotsEl.innerHTML = '';
+            slides.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'dot-btn' + (i===idx? ' active':'');
+                btn.setAttribute('aria-label', 'Slide ' + (i+1));
+                btn.addEventListener('click', ()=> { go(i); });
+                dotsEl.appendChild(btn);
+            });
+        }
+
+        function update(){
+            if(!slidesEl) return;
+            slidesEl.style.transform = 'translateX(' + (-idx*100) + '%)';
+            if(dotsEl) Array.from(dotsEl.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
+        }
+
+        function go(i){
+            if(slides.length === 0) return;
+            idx = (i + slides.length) % slides.length;
+            update();
+            restartAutoplay();
+        }
+
+        if(prev) prev.addEventListener('click', ()=> go(idx-1));
+        if(next) next.addEventListener('click', ()=> go(idx+1));
+
+        function startAutoplay(){
+            if(!autoplay || slides.length === 0) return;
+            timer = setInterval(()=> go(idx+1), interval);
+        }
+        function restartAutoplay(){ clearInterval(timer); startAutoplay(); }
+
+        renderDots();
+        update();
+        startAutoplay();
+
+        const slideshow = document.querySelector('.slideshow');
+        if(slideshow){
+            slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
+            slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
+        }
+    })();
+</script>
+
+<script>
+    // Zeige nur 3 News auf der Startseite: reagiere auf das 'news:loaded' event
+    window.addEventListener('news:loaded', (e) => {
+        try {
+            if (typeof allNews !== 'undefined' && Array.isArray(allNews)) {
+                const first3 = allNews.slice(0,3);
+                if (typeof renderNews === 'function') renderNews(first3);
             }
-        });
-    </script>
+        } catch (err) {
+            console.error('Fehler beim Rendern der Startseite-News:', err);
+        }
+    });
+
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
+
+<script src="news.js"></script>
 </body>
 </html>
