@@ -35,7 +35,7 @@ function parseDateStr(s){
             clicked = true;
             return;
         }
-        // second click: allow navigation to News.html (default behavior)
+        // second click: allow navigation to /News (default behavior)
     });
 
     // If news load completes and a pending click exists, perform the action
@@ -50,7 +50,7 @@ function parseDateStr(s){
     });
 })();
 
-fetch("news.json")
+fetch("/news.json")
     .then(res => res.json())
     .then(news => {
 

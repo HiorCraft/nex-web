@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="images/icon/logo.png">
+    <link rel="icon" type="image/png" href="../images/icon/logo.png">
     <title>Hexoria – Craftunity?</title>
 
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <header id="header"></header>
-    <script src="header.js"></script>
+    <script src="../header.js"></script>
 </head>
 <body>
 
@@ -204,7 +204,7 @@
              <div class="container grid grid-5">
 
                  <article class="card team-card">
-                     <img class="rank-icon" src="images/rank/nautical_admin_rank.png" alt="Admin Icon">
+                     <img class="rank-icon" src="../images/rank/nautical_admin_rank.png" alt="Admin Icon">
                      <div>
                          <h3>Admin</h3>
                          <p class="small muted">
@@ -214,7 +214,7 @@
                  </article>
 
                  <article class="card team-card">
-                     <img class="rank-icon" src="images/rank/nautical_dev_rank.png" alt="Developer Icon">
+                     <img class="rank-icon" src="../images/rank/nautical_dev_rank.png" alt="Developer Icon">
                      <div>
                          <h3>Developer</h3>
                          <p class="small muted">
@@ -224,7 +224,7 @@
                  </article>
 
                  <article class="card team-card">
-                     <img class="rank-icon" src="images/rank/nautical_modertor_rank.png" alt="Moderator Icon">
+                     <img class="rank-icon" src="../images/rank/nautical_modertor_rank.png" alt="Moderator Icon">
                      <div>
                          <h3>Moderator</h3>
                          <p class="small muted">
@@ -234,7 +234,7 @@
                  </article>
 
                  <article class="card team-card">
-                     <img class="rank-icon" src="images/rank/nautical_supporter_rank.png" alt="Supporter Icon">
+                     <img class="rank-icon" src="../images/rank/nautical_supporter_rank.png" alt="Supporter Icon">
                      <div>
                          <h3>Supporter</h3>
                          <p class="small muted">
@@ -244,7 +244,7 @@
                  </article>
 
                  <article class="card team-card">
-                     <img class="rank-icon" src="images/rank/nautical_VIP_rank.png" alt="VIP Icon">
+                     <img class="rank-icon" src="../images/rank/nautical_VIP_rank.png" alt="VIP Icon">
                      <div>
                          <h3>VIP</h3>
                          <p class="small muted">
@@ -271,16 +271,9 @@
    </section>
 
     <footer id="footer"></footer>
-    <script src="footer.js"></script>
+    <script src="../footer.js"></script>
 
 
-    <script>
-        const currentPage = window.location.pathname.split("/").pop();
-        document.querySelectorAll(".nav-link").forEach(link => {
-            if (link.getAttribute("href") === currentPage) {
-                link.classList.add("active");
-            }
-        });
-    </script>
+    
 </body>
 </html>
