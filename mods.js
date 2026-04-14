@@ -1,4 +1,4 @@
-fetch("mods.json")
+fetch("data/mods.json")
     .then(res => res.json())
     .then(data => {
         loadMods(data.allowed, "allowed-mods", "whitelist");
