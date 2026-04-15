@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="images/icon/logo.png" />
+  <link rel="icon" type="image/png" href="../images/icon/logo.png" />
   <title>Hexoria – Rank</title>
 
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <header id="header"></header>
-  <script src="header.js"></script>
+  <script src="../header.js"></script>
 </head>
 <body>
 
@@ -38,10 +38,10 @@
       <tbody>
         <tr>
           <td>Icon</td>
-          <td><img src="images/rank/nautical_member_rank.png" alt="Member Icon" class="rank-icon"></td>
-          <td><img src="images/rank/nautical_premium_rank.png" alt="Premium Icon" class="rank-icon"></td>
-          <td><img src="images/rank/nautical_premium+_rank.png" alt="Premium+ Icon" class="rank-icon"></td>
-          <td><img src="images/rank/nautical_content_rank.png" alt="Content Icon" class="rank-icon"></td>
+          <td><img src="../images/rank/nautical_member_rank.png" alt="Member Icon" class="rank-icon"></td>
+          <td><img src="../images/rank/nautical_premium_rank.png" alt="Premium Icon" class="rank-icon"></td>
+          <td><img src="../images/rank/nautical_premium+_rank.png" alt="Premium+ Icon" class="rank-icon"></td>
+          <td><img src="../images/rank/nautical_content_rank.png" alt="Content Icon" class="rank-icon"></td>
         </tr>
         <tr>
           <td>Tägeliche Coins</td>
@@ -117,17 +117,10 @@
   </section>
 
 <footer id="footer"></footer>
-<script src="footer.js"></script>
+<script src="../footer.js"></script>
 
 
-<script>
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.classList.add("active");
-    }
-  });
-</script>
+
 
 </body>
 </html>
