@@ -2339,4 +2339,32 @@ body.popup-open {
     }
 }
 
+/* ========== NEWS PAGE STYLES ========== */
+
+#news-intro {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#news-intro .section__title {
+    background: linear-gradient(135deg, #00c853 0%, #00a838 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#news-intro p {
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+#news {
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.03) 0%, rgba(0, 168, 56, 0.01) 100%);
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 200, 83, 0.1);
+}
+
 
