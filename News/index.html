@@ -7,10 +7,11 @@
     <title>Hexoria – News</title>
 
     <link rel="stylesheet" href="../styles.css">
-    <header id="header"></header>
-    <script src="../header.js"></script>
 </head>
 <body>
+
+<header id="header"></header>
+<script src="../header.js"></script>
 
 <section id="news" class="container">
     <div id="news-popup">
@@ -39,8 +40,19 @@
 </section>
 
 <footer id="footer"></footer>
-<script src="../footer.js" defer></script>
+<script src="../footer.js"></script>
 
 <script src="../news.js"></script>
+
+<script>
+  // Markiere aktiven Nav-Link
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage || link.textContent.trim().toLowerCase() === 'news') {
+      link.classList.add("active");
+    }
+  });
+</script>
+
 </body>
 </html>

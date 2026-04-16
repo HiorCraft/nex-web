@@ -8,12 +8,11 @@
 
 
     <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
 
     <header id="header"></header>
     <script src="../header.js"></script>
-
-</head>
-<body>
 
 <section id="privacy">
     <div class="container">
@@ -77,8 +76,15 @@
 <footer id="footer"></footer>
 <script src="../footer.js"></script>
 
-
-
+<script>
+  // Markiere aktiven Nav-Link
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage || link.textContent.trim().toLowerCase() === 'datenschutz') {
+      link.classList.add("active");
+    }
+  });
+</script>
 
 </body>
 </html>
