@@ -980,8 +980,216 @@ nav {
     text-align: center;
 }
 
+/* ========== CREATOR STYLES ========== */
 
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem !important;
+    background: linear-gradient(135deg, var(--card) 0%, rgba(56, 189, 248, 0.05) 100%);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
 
+.team-card:hover {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(52, 211, 153, 0.05) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(56, 189, 248, 0.15);
+}
+
+.team-card:hover::before {
+    top: -20%;
+    right: -20%;
+}
+
+.team-head {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .team-head {
+    border-color: var(--accent-2);
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.team-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.team-card .small {
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.creator-badges {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.badge.twitch {
+    background: rgba(139, 69, 255, 0.2);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 69, 255, 0.4);
+}
+
+.badge.twitch:hover {
+    background: rgba(139, 69, 255, 0.3);
+    border-color: rgba(139, 69, 255, 0.6);
+    box-shadow: 0 0 12px rgba(139, 69, 255, 0.3);
+}
+
+.badge.tiktok {
+    background: rgba(236, 72, 153, 0.2);
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.4);
+}
+
+.badge.tiktok:hover {
+    background: rgba(236, 72, 153, 0.3);
+    border-color: rgba(236, 72, 153, 0.6);
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.3);
+}
+
+.badge.youtube {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.badge.youtube:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+.team-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.team-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.team-links a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(56, 189, 248, 0.3);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        padding: 1.5rem 1rem !important;
+    }
+}
+
+/* Creator FAQ Styles */
+#creator-faq .grid {
+    margin-top: 2rem;
+}
+
+#creator-faq .card {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(52, 211, 153, 0.04) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#creator-faq .card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+#creator-faq .card:hover {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(52, 211, 153, 0.1) 100%);
+    border-color: rgba(56, 189, 248, 0.2);
+    transform: translateX(8px);
+}
+
+#creator-faq .card:hover::before {
+    transform: scaleY(1);
+}
+
+#creator-faq .card h3 {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
 
 
