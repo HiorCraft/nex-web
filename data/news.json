@@ -5,8 +5,8 @@
     "category": "Devblog",
     "date": "14.02.2026",
     "description": "Gradle Problem ist immer noch nicht behoben!",
-    "image": "images/news/devblog_02_2026.png",
-    "longtext": "<p>Leider haben wir immer noch Probleme mit Gradle, was die Entwicklung und das Testen von Updates erschwert.<p>Unser Team arbeitet intensiv daran, dieses Problem zu lösen, aber es könnte noch einige Zeit dauern, bis wir eine stabile Lösung gefunden haben.<p>Wir entschuldigen uns für die Unannehmlichkeiten und danken euch für eure Geduld und Unterstützung während dieser Zeit!</p>"
+    "image": "/images/news/devblog_02_2026.png",
+    "longtext": "<p>Leider haben wir immer noch Probleme mit Gradle, was die Entwicklung und das Testen von Updates erschwert.</p><p>Unser Team arbeitet intensiv daran, dieses Problem zu lösen, aber es könnte noch einige Zeit dauern, bis wir eine stabile Lösung gefunden haben.</p><p>Wir entschuldigen uns für die Unannehmlichkeiten und danken euch für eure Geduld und Unterstützung während dieser Zeit!</p>"
   },
   {
     "title": "Devblog #1 - Endlich News!",
@@ -14,8 +14,8 @@
     "category": "Devblog",
     "date": "1.02.2026",
     "description": "Erstes Devblog auf dem Server!",
-    "image": "images/news/devblog_01_2026.png",
-    "longtext": "<p>Willkommen zum ersten Devblog auf unserem Server!<p>In diesem Blog werden wir euch regelmäßig über die neuesten Entwicklungen, Updates und Pläne für unseren Server informieren.<p>Wir freuen uns darauf, diese Reise mit euch zu teilen und gemeinsam eine großartige Community aufzubauen!"
+    "image": "/images/news/devblog_01_2026.png",
+    "longtext": "<p>Willkommen zum ersten Devblog auf unserem Server!</p><p>In diesem Blog werden wir euch regelmäßig über die neuesten Entwicklungen, Updates und Pläne für unseren Server informieren.</p><p>Wir freuen uns darauf, diese Reise mit euch zu teilen und gemeinsam eine großartige Community aufzubauen!</p>"
   },
   {
     "title": "Erste PvP Event",
@@ -23,7 +23,7 @@
     "category": "Event",
     "date": "31.01.2026",
     "description": "Das erste PvP Event auf dem Server!",
-    "image": "images/news/event_pvp_01.png",
-    "longtext": "<p>Kurz Es war das Erste Event auf den Server und hatte paar bugs von Dev Team und extern.<p>Die Bugs sind schon Notiert und werden im nächsten Event gefixt.<p> Das Event Kommt nochmal und wird besser als das Erste mal.<p>Danke an alle die Teilgenommen haben!"
+    "image": "/images/news/event_pvp_01.png",
+    "longtext": "<p>Kurz: Es war das erste Event auf dem Server und hatte ein paar Bugs vom Dev Team und extern.</p><p>Die Bugs sind schon notiert und werden beim nächsten Event behoben.</p><p>Das Event kommt nochmal und wird besser als das erste Mal!</p><p>Danke an alle, die teilgenommen haben!</p>"
   }
 ]
