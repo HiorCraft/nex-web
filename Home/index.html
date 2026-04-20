@@ -104,6 +104,13 @@
             const slideshow = document.querySelector('.slideshow');
             slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
             slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
+
+            let touchStartX = 0;
+            slideshow.addEventListener('touchstart', (e)=> { touchStartX = e.touches[0].clientX; }, {passive: true});
+            slideshow.addEventListener('touchend', (e)=> {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if(Math.abs(diff) > 50) go(diff > 0 ? idx+1 : idx-1);
+            }, {passive: true});
         })();
     </script>
 </section>
@@ -283,6 +290,13 @@
         if(slideshow){
             slideshow.addEventListener('mouseenter', ()=> { clearInterval(timer); });
             slideshow.addEventListener('mouseleave', ()=> { restartAutoplay(); });
+
+            let touchStartX = 0;
+            slideshow.addEventListener('touchstart', (e)=> { touchStartX = e.touches[0].clientX; }, {passive: true});
+            slideshow.addEventListener('touchend', (e)=> {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if(Math.abs(diff) > 50) go(diff > 0 ? idx+1 : idx-1);
+            }, {passive: true});
         }
     })();
 </script>
