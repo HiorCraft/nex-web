@@ -18,6 +18,24 @@
     "longtext": "<p>Willkommen zum ersten Devblog auf unserem Server!</p><p>In diesem Blog werden wir euch regelmäßig über die neuesten Entwicklungen, Updates und Pläne für unseren Server informieren.</p><p>Wir freuen uns darauf, diese Reise mit euch zu teilen und gemeinsam eine großartige Community aufzubauen!</p>"
   },
   {
+    "title": "Update #2 - Lobby Update",
+    "slug": "update-2",
+    "category": "Update",
+    "date": "20.04.2026",
+    "description": "Neue Lobby & vielen neuen Features!",
+    "image": "/images/news/update_02_2026.png",
+    "longtext": "<p>Wir freuen uns, euch mitteilen zu können, dass wir ein großes Lobby-Update auf unserem Server implementiert haben!</p><p>Die neue Lobby bietet nicht nur ein frisches Design, sondern auch viele neue Features und Verbesserungen, die das Spielerlebnis noch angenehmer machen.</p><p>Wir haben hart daran gearbeitet, die Lobby benutzerfreundlicher und interaktiver zu gestalten, damit ihr euch noch mehr auf eure Abenteuer in unserem Server freuen könnt!</p>"
+  },
+  {
+    "title": "Update #1 - Server Transfer",
+    "slug": "update-1",
+    "category": "Update",
+    "date": "14.04.2026",
+    "description": "Neuer Server, neue Möglichkeiten!",
+    "image": "/images/news/update_01_2026.png",
+    "longtext": "<p>Wir freuen uns, euch mitteilen zu können, dass wir unseren Server erfolgreich auf eine neue Plattform übertragen haben!</p><p>Dieser Server Transfer ermöglicht es uns, euch ein stabileres und schnelleres Spielerlebnis zu bieten, sowie neue Funktionen und Updates schneller zu implementieren.</p><p>Wir danken euch für eure Geduld während dieses Prozesses und freuen uns darauf, gemeinsam mit euch die neuen Möglichkeiten zu erkunden, die dieser Server Transfer mit sich bringt!</p>"
+  },
+  {
     "title": "Erste PvP Event",
     "slug": "event-2026",
     "category": "Event",
