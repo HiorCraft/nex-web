@@ -128,8 +128,11 @@ function openPopup(entry) {
     if(titleEl) titleEl.textContent = entry.title || '';
     if(dateEl) dateEl.textContent = entry.date || '';
     if(catEl) catEl.textContent = entry.category || '';
-    if(bodyEl) bodyEl.innerHTML = entry.longtext || entry.description || '';
-    if(imgEl) imgEl.src = entry.image || ''; imgEl.alt = entry.title || 'News Bild';
+    if(bodyEl) bodyEl.textContent = entry.longtext || entry.description || '';
+    if(imgEl) {
+        imgEl.src = entry.image || '';
+        imgEl.alt = entry.title || 'News Bild';
+    }
 
     if(popup) {
         popup.classList.add("active");

@@ -275,7 +275,7 @@ $defaultPassword = adminPassword() === 'change-me';
                     <div><label>Date *</label><input class="admin-input" name="date" placeholder="DD.MM.YYYY" required></div>
                     <div style="grid-column: 1 / -1;"><label>Description *</label><textarea class="admin-textarea" name="description" required></textarea></div>
                     <div style="grid-column: 1 / -1;"><label>Image</label><input class="admin-input" name="image" placeholder="/images/news/example.png"></div>
-                    <div style="grid-column: 1 / -1;"><label>Longtext (HTML)</label><textarea class="admin-textarea" name="longtext"></textarea></div>
+                    <div style="grid-column: 1 / -1;"><label>Longtext (Text, Leerzeilen werden uebernommen)</label><textarea class="admin-textarea" name="longtext" placeholder="Hier normalen Text schreiben. Leerzeilen bleiben erhalten."></textarea></div>
                 </div>
                 <div class="admin-actions"><button class="admin-btn" type="submit">Erstellen</button></div>
             </form>
@@ -296,7 +296,7 @@ $defaultPassword = adminPassword() === 'change-me';
                             <div><label>Date *</label><input class="admin-input" name="date" value="<?= h((string)$n['date']) ?>" required></div>
                             <div style="grid-column: 1 / -1;"><label>Description *</label><textarea class="admin-textarea" name="description" required><?= h((string)$n['description']) ?></textarea></div>
                             <div style="grid-column: 1 / -1;"><label>Image</label><input class="admin-input" name="image" value="<?= h((string)$n['image']) ?>"></div>
-                            <div style="grid-column: 1 / -1;"><label>Longtext (HTML)</label><textarea class="admin-textarea" name="longtext"><?= h((string)$n['longtext']) ?></textarea></div>
+                            <div style="grid-column: 1 / -1;"><label>Longtext (Text, Leerzeilen werden uebernommen)</label><textarea class="admin-textarea" name="longtext" placeholder="Hier normalen Text schreiben. Leerzeilen bleiben erhalten."><?= h((string)$n['longtext']) ?></textarea></div>
                         </div>
                         <div class="admin-actions"><button class="admin-btn" type="submit">Speichern</button></div>
                     </form>

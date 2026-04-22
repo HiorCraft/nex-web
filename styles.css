@@ -713,6 +713,11 @@ nav {
     transition: transform .35s ease, opacity .35s ease;
 }
 
+#popup-body {
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
 #news-popup.active .popup-content {
     transform: translateY(0);
     opacity: 1;
