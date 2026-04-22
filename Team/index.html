@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="../images/icon/logo.png">
-    <title>Hexoria – Team</title>
-
+    <title>Hexoria – Team beitreten</title>
 
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -14,87 +13,183 @@
 <header id="header"></header>
 <script src="../header.js"></script>
 
-<section id="team-apply" style="margin-top:3rem;">
+<!-- HERO -->
+<section class="team-hero">
+    <div class="container">
+        <h1 class="team-hero__title">Werde Teil des<br>Hexoria Teams</h1>
+        <p class="team-hero__sub">
+            Du möchtest aktiv am Hexoria‑Netzwerk mitarbeiten und unser Projekt mitgestalten?
+            Bewirb dich jetzt für eine unserer offenen Rollen.
+        </p>
+        <a class="btn" href="#team-apply">Rollen ansehen</a>
+    </div>
+</section>
+
+<!-- BEWERBUNGSPROZESS -->
+<section id="team-process">
     <div class="container">
 
-        <h2 class="section__title">Werde Teil des Hexoria Teams</h2>
+        <h2 class="section__title">Wie läuft die Bewerbung ab?</h2>
 
-        <p class="small muted" style="max-width:700px;">
-            Du möchtest aktiv am Hexoria‑Netzwerk mitarbeiten und unser Projekt mitgestalten?
-            Dann bewirb dich jetzt für eine unserer offenen Rollen. Wir suchen kreative Köpfe,
-            Entwickler mit Leidenschaft und Builder mit Visionen.
-        </p>
+        <div class="apply-steps">
 
-        <!-- Rollen -->
-        <h3 style="margin-top:2.5rem;">Offene Rollen</h3>
+            <div class="apply-step">
+                <div class="apply-step__num">1</div>
+                <div class="apply-step__body">
+                    <h3>Rolle wählen</h3>
+                    <p class="small muted">Schau dir die offenen Rollen an und entscheide, für welche du dich bewerben möchtest.</p>
+                </div>
+            </div>
 
-        <div class="grid grid-3" style="margin-top:1rem;">
+            <div class="apply-step__connector" aria-hidden="true"></div>
+
+            <div class="apply-step">
+                <div class="apply-step__num">2</div>
+                <div class="apply-step__body">
+                    <h3>Discord beitreten</h3>
+                    <p class="small muted">Tritt unserem Discord bei und öffne ein Bewerbungs‑Ticket im entsprechenden Kanal.</p>
+                </div>
+            </div>
+
+            <div class="apply-step__connector" aria-hidden="true"></div>
+
+            <div class="apply-step">
+                <div class="apply-step__num">3</div>
+                <div class="apply-step__body">
+                    <h3>Bewerbung einreichen</h3>
+                    <p class="small muted">Fülle das Formular vollständig aus. Füge Portfolio‑Links oder Beispiele deiner Arbeit hinzu.</p>
+                </div>
+            </div>
+
+            <div class="apply-step__connector" aria-hidden="true"></div>
+
+            <div class="apply-step">
+                <div class="apply-step__num">4</div>
+                <div class="apply-step__body">
+                    <h3>Rückmeldung erhalten</h3>
+                    <p class="small muted">Das Team meldet sich in der Regel innerhalb von 2–7 Tagen bei dir.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ROLLEN -->
+<section id="team-apply">
+    <div class="container">
+
+        <h2 class="section__title">Offene Rollen</h2>
+
+        <div class="grid grid-3" style="margin-top:1.5rem;">
 
             <!-- Developer -->
-            <article class="card">
+            <article class="card apply-role-card">
+                <div class="role-status role-status--open">Offen</div>
                 <h4>💻 Developer</h4>
                 <p class="small muted">
                     Du entwickelst Plugins, Systeme und Features für Hexoria.
                     Sauberer Code, Performance und Kreativität sind dir wichtig.
                 </p>
                 <ul class="small muted">
-                    <li>Erfahrung mit Java & Kotlin</li>
-                    <li>Kenntnisse in Spigot & Paper APIs</li>
+                    <li>Erfahrung mit Java &amp; Kotlin</li>
+                    <li>Kenntnisse in Spigot &amp; Paper APIs</li>
                     <li>Saubere, modulare Code‑Struktur</li>
-                    <li>Teamfähigkeit & Zuverlässigkeit</li>
+                    <li>Teamfähigkeit &amp; Zuverlässigkeit</li>
                 </ul>
+                <a class="btn apply-role-btn" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">
+                    Jetzt bewerben
+                </a>
             </article>
 
             <!-- Builder -->
-            <article class="card">
+            <article class="card apply-role-card">
+                <div class="role-status role-status--open">Offen</div>
                 <h4>🏗️ Builder</h4>
                 <p class="small muted">
                     Du baust Welten, Maps und Strukturen für Events, Lobbys und Spielmodi.
                     Kreativität und ein Auge für Details sind entscheidend.
                 </p>
                 <ul class="small muted">
-                    <li>Erfahrung im organischen & strukturellen Bauen</li>
-                    <li>Gutes Gefühl für Atmosphäre & Stil</li>
-                    <li>Erfahrung mit Axiom & WorldEdit</li>
+                    <li>Erfahrung im organischen &amp; strukturellen Bauen</li>
+                    <li>Gutes Gefühl für Atmosphäre &amp; Stil</li>
+                    <li>Erfahrung mit Axiom &amp; WorldEdit</li>
                     <li>Portfolio oder Screenshots</li>
                 </ul>
+                <a class="btn apply-role-btn" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">
+                    Jetzt bewerben
+                </a>
             </article>
 
             <!-- Designer -->
-            <article class="card">
+            <article class="card apply-role-card">
+                <div class="role-status role-status--open">Offen</div>
                 <h4>🎨 Designer</h4>
                 <p class="small muted">
                     Du gestaltest Grafiken, Icons, UI‑Elemente und Branding‑Materialien
                     für Website, Social Media und Ingame‑Designs.
                 </p>
                 <ul class="small muted">
-                    <li>Erfahrung mit Blender & blockbench</li>
+                    <li>Erfahrung mit Blender &amp; Blockbench</li>
                     <li>Kreativer, moderner Stil</li>
                     <li>Saubere, klare Designs</li>
                     <li>Portfolio erforderlich</li>
                 </ul>
+                <a class="btn apply-role-btn" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">
+                    Jetzt bewerben
+                </a>
             </article>
-        </div>
-        <!-- Hinweis -->
-        <p class="small muted" style="margin-top:1.5rem;">
-            Hinweis: Wir suchen aktuell <strong>keine Supporter</strong>.
-            Fokus liegt auf kreativen und technischen Rollen.
-        </p>
 
-        <!-- Bewerben Button -->
-        <div style="text-align:center; margin-top:3rem;">
-            <a class="btn" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">
-                Jetzt bewerben
-            </a>
+        </div>
+
+        <!-- Hinweis -->
+        <div class="alert note" style="margin-top:2rem;">
+            <strong>Hinweis:</strong> Wir suchen aktuell <strong>keine Supporter</strong>.
+            Der Fokus liegt auf kreativen und technischen Rollen.
         </div>
 
     </div>
 </section>
 
-<section id="team-faq" style="margin-top:3rem;">
+<!-- VORAUSSETZUNGEN -->
+<section id="team-requirements">
     <div class="container">
 
-        <h2 class="section__title">Team FAQ</h2>
+        <h2 class="section__title">Allgemeine Voraussetzungen</h2>
+
+        <div class="grid grid-2" style="margin-top:1.5rem;">
+
+            <article class="card">
+                <h4>📋 Grundvoraussetzungen</h4>
+                <ul class="small muted">
+                    <li>Mindestalter: 16 Jahre</li>
+                    <li>Aktiv auf Hexoria spielen</li>
+                    <li>Zuverlässigkeit &amp; Engagement</li>
+                    <li>Teamfähigkeit &amp; respektvoller Umgang</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h4>🗂️ Bewerbungsunterlagen</h4>
+                <ul class="small muted">
+                    <li>Minecraft‑Nutzername</li>
+                    <li>Alter &amp; Zeitzone</li>
+                    <li>Erfahrung in der Rolle</li>
+                    <li>Portfolio‑Link oder Beispiele (falls vorhanden)</li>
+                </ul>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="team-faq">
+    <div class="container">
+
+        <h2 class="section__title">Häufige Fragen</h2>
 
         <p class="small muted" style="max-width:700px;">
             Häufig gestellte Fragen rund um die Bewerbung für das Hexoria‑Team.
@@ -119,7 +214,7 @@
             <article class="card">
                 <h3>Kann ich mich für mehrere Rollen bewerben?</h3>
                 <p class="small muted">
-                    Nein. Bitte bewirb dich nur für eine Rolle, das wir besser einschätzen können, ob du passt.
+                    Nein. Bitte bewirb dich nur für eine Rolle, damit wir besser einschätzen können, ob du passt.
                 </p>
             </article>
 
@@ -153,17 +248,34 @@
                 </p>
             </article>
 
+            <article class="card">
+                <h3>Ist die Arbeit bezahlt?</h3>
+                <p class="small muted">
+                    Nein. Alle Positionen sind ehrenamtlich. Du erhältst dafür exklusive Ingame‑Vorteile
+                    und kannst aktiv das Projekt mitgestalten.
+                </p>
+            </article>
+
         </div>
 
     </div>
 </section>
 
+<!-- DISCORD CTA -->
+<section id="discord-cta">
+    <div class="container">
+        <div class="discord-card">
+            <div>
+                <h3>Noch Fragen?</h3>
+                <p>Tritt unserem Discord bei und stelle deine Fragen direkt im Team‑Bewerber‑Kanal.</p>
+            </div>
+            <a class="btn--discord" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">Discord beitreten</a>
+        </div>
+    </div>
+</section>
 
 <footer id="footer"></footer>
 <script src="../footer.js"></script>
-
-
-
 
 </body>
 </html>

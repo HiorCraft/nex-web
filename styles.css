@@ -159,6 +159,10 @@ section { padding: 2rem 0; }
     gap: 1rem;
 }
 
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -949,6 +953,182 @@ body.popup-open {
 }
 
 /* ========== TEAM PAGE STYLES ========== */
+
+/* Hero */
+.team-hero {
+    padding: 4rem 0 3rem;
+    background: radial-gradient(
+        900px 350px at 30% -10%,
+        rgba(0, 200, 83, 0.15),
+        transparent
+    );
+    border-bottom: 1px solid var(--border);
+}
+
+.team-hero__title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    background: linear-gradient(135deg, #fff 30%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.team-hero__sub {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 0 2rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .team-hero {
+        padding: 2.5rem 0 2rem;
+    }
+    .team-hero__title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Application process steps */
+#team-process {
+    margin-top: 3rem;
+}
+
+.apply-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.apply-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+    min-width: 180px;
+}
+
+.apply-step__num {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #000;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 16px rgba(0, 200, 83, 0.4);
+}
+
+.apply-step__body h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.apply-step__body p {
+    margin: 0;
+}
+
+.apply-step__connector {
+    flex: 0 0 2rem;
+    height: 2px;
+    background: linear-gradient(to right, var(--accent), var(--accent-2));
+    align-self: 1.25rem;
+    margin-top: 1.25rem;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .apply-steps {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .apply-step__connector {
+        width: 2px;
+        height: 1.5rem;
+        flex: none;
+        margin: 0 0 0 1.15rem;
+        background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+    }
+}
+
+/* Role status badge */
+.role-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.role-status--open {
+    background: rgba(0, 200, 83, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(0, 200, 83, 0.35);
+}
+
+.role-status--closed {
+    background: rgba(239, 68, 68, 0.12);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+/* Role card with apply button */
+.apply-role-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-role-btn {
+    margin-top: auto;
+    padding-top: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Requirements section */
+#team-requirements .card {
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.05) 0%, rgba(52, 211, 153, 0.03) 100%);
+    border: 1px solid rgba(0, 200, 83, 0.1);
+}
+
+#team-requirements .card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.75rem;
+}
+
+#team-requirements .card ul li {
+    padding-left: 1.4rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+}
+
+#team-requirements .card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+#team-requirements .card h4 {
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+}
 
 #team-apply .card {
     background: linear-gradient(135deg, rgba(52, 211, 153, 0.08) 0%, rgba(0, 200, 83, 0.04) 100%);
