@@ -50,7 +50,7 @@ function parseDateStr(s){
     });
 })();
 
-fetch("/data/news.json")
+fetch("/Admin/api.php?entity=news")
     .then(res => res.json())
     .then(news => {
 

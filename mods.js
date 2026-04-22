@@ -1,19 +1,20 @@
-fetch("/data/mods.json")
+fetch("/Admin/api.php?entity=mods")
     .then(res => res.json())
     .then(data => {
-        loadMods(data.allowed, "allowed-mods", "whitelist");
-        loadMods(data.banned, "banned-mods", "blacklist");
+        loadMods(data.allowed || [], "allowed-mods", "whitelist");
+        loadMods(data.banned || [], "banned-mods", "blacklist");
     });
 
 function loadMods(list, elementId, type) {
     const ul = document.getElementById(elementId);
+    if (!ul || !Array.isArray(list)) return;
 
     list.forEach(mod => {
         fetch(`https://api.modrinth.com/v2/project/${mod.slug}`)
             .then(res => res.json())
             .then(api => {
                 const li = document.createElement("li");
-                li.classList.add("mod-item", type); // <‑‑ HIER passiert die Magie
+                li.classList.add("mod-item", type);
 
                 li.innerHTML = `
                     <img src="${api.icon_url}" class="mod-icon" alt="${api.title} Icon">
