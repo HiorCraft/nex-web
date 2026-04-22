@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../images/icon/logo.png" />
+    <title>Hexoria - Roadmap</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+        .roadmap-hero {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .roadmap-hero p {
+            max-width: 760px;
+            margin: 0.75rem auto 0;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            margin-top: 1rem;
+        }
+
+        .roadmap-card h3 {
+            margin-top: 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+
+        .status-plan {
+            background: rgba(52, 152, 219, 0.2);
+            color: #7ecbff;
+            border: 1px solid rgba(52, 152, 219, 0.45);
+        }
+
+        .status-progress {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffd666;
+            border: 1px solid rgba(255, 193, 7, 0.45);
+        }
+
+        .status-live {
+            background: rgba(0, 200, 83, 0.2);
+            color: #8dffb6;
+            border: 1px solid rgba(0, 200, 83, 0.45);
+        }
+
+        .roadmap-list {
+            margin: 0.8rem 0 0;
+            padding-left: 1.15rem;
+        }
+
+        .roadmap-list li {
+            margin-bottom: 0.55rem;
+            line-height: 1.45;
+        }
+
+        .roadmap-kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .roadmap-kpis .card {
+            text-align: center;
+        }
+
+        .roadmap-kpis strong {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header"></header>
+<script src="../header.js"></script>
+
+<section class="container roadmap-hero">
+    <h1 class="section__title">Roadmap 2026/2027</h1>
+    <p class="small muted">
+        Hier siehst du, welche Updates wir als naechstes fuer Hexoria planen.
+        Die Roadmap wird laufend aktualisiert, wenn sich Prioritaeten oder Timing aendern.
+    </p>
+</section>
+
+<section class="container">
+    <h2 class="section__title">Naechste Updates nach Quartal</h2>
+
+    <div class="roadmap-grid">
+        <article class="card roadmap-card">
+            <h3>Q2 2026</h3>
+            <ul class="roadmap-list">
+                <li>Admin-Login Haertung <span class="status status-progress">In Arbeit</span></li>
+                <li>Bessere Fehlermeldungen in News/Mods Admin <span class="status status-plan">Geplant</span></li>
+                <li>Backup-Prozess fuer Content-Datenbank <span class="status status-progress">In Arbeit</span></li>
+                <li>Performance-Pass fuer Startseite <span class="status status-plan">Geplant</span></li>
+            </ul>
+        </article>
+
+        <article class="card roadmap-card">
+            <h3>Q3 2026</h3>
+            <ul class="roadmap-list">
+                <li>Neue News-Kategorien und Filter <span class="status status-plan">Geplant</span></li>
+                <li>Ueberarbeitete Mods-Ansicht mit stabilen Fallbacks <span class="status status-plan">Geplant</span></li>
+                <li>Mobile UX-Polish fuer alle Kernseiten <span class="status status-plan">Geplant</span></li>
+                <li>Mehr Ingame-Event-Kommunikation ueber News <span class="status status-plan">Geplant</span></li>
+            </ul>
+        </article>
+
+        <article class="card roadmap-card">
+            <h3>Q4 2026</h3>
+            <ul class="roadmap-list">
+                <li>Community Event-System v1 <span class="status status-plan">Geplant</span></li>
+                <li>Interne Moderations-Tools Verbesserungen <span class="status status-plan">Geplant</span></li>
+                <li>Analytics fuer Content und Seitenleistung <span class="status status-plan">Geplant</span></li>
+                <li>Seasonal Updates (Winter/Feiertage) <span class="status status-plan">Geplant</span></li>
+            </ul>
+        </article>
+
+        <article class="card roadmap-card">
+            <h3>Q1 2027</h3>
+            <ul class="roadmap-list">
+                <li>Account/Profil-Verbesserungen auf der Webseite <span class="status status-plan">Geplant</span></li>
+                <li>Belohnungssystem fuer aktive Community-Mitglieder <span class="status status-plan">Geplant</span></li>
+                <li>Stabilitaets- und Security-Release <span class="status status-plan">Geplant</span></li>
+                <li>Roadmap-Review mit Community Voting <span class="status status-plan">Geplant</span></li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section__title">Was bereits live ist</h2>
+    <div class="card">
+        <ul class="roadmap-list">
+            <li>Getrennte Admin-Bereiche fuer News und Mods <span class="status status-live">Live</span></li>
+            <li>Session-basiertes Login fuer den Admin-Bereich <span class="status status-live">Live</span></li>
+            <li>News- und Mods-Seiten fuer oeffentliche Inhalte <span class="status status-live">Live</span></li>
+        </ul>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section__title">Wie wir priorisieren</h2>
+    <div class="card">
+        <p class="small muted">
+            Wir priorisieren Updates nach vier Punkten: Impact fuer Spieler,
+            Stabilitaet/Sicherheit, Aufwand und Community-Feedback.
+            Features mit hohem Nutzen und niedrigem Risiko kommen zuerst.
+        </p>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section__title">Roadmap-KPIs</h2>
+    <div class="roadmap-kpis">
+        <div class="card">
+            <strong>&gt;= 99.5%</strong>
+            <span class="small muted">Ziel Verfuegbarkeit pro Monat</span>
+        </div>
+        <div class="card">
+            <strong>&lt; 15 Min</strong>
+            <span class="small muted">Ziel Publish-Zeit fuer News/Mods</span>
+        </div>
+        <div class="card">
+            <strong>&gt;= 80</strong>
+            <span class="small muted">Mobile Performance (Lighthouse)</span>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section__title">FAQ zur Roadmap</h2>
+    <div class="faq-grid">
+        <article class="card">
+            <h3>Warum aendern sich Termine manchmal?</h3>
+            <p class="small muted">Wenn Security, Bugs oder Event-Themen dringender sind, schieben wir Features nach hinten.</p>
+        </article>
+        <article class="card">
+            <h3>Kann die Community Vorschlaege machen?</h3>
+            <p class="small muted">Ja, ueber Discord und Feedback in den News-Kommentaren nehmen wir Vorschlaege direkt auf.</p>
+        </article>
+        <article class="card">
+            <h3>Wie oft wird diese Seite aktualisiert?</h3>
+            <p class="small muted">Mindestens einmal pro Monat und zusaetzlich bei groesseren Release-Entscheidungen.</p>
+        </article>
+    </div>
+</section>
+
+<section class="container">
+    <div class="card">
+        <h2 class="section__title">Mitreden und nichts verpassen</h2>
+        <p class="small muted">Folge den News und komm in den Discord, um als erstes ueber neue Updates informiert zu werden.</p>
+        <div class="cta-row">
+            <a class="btn" href="/News">Zu den News</a>
+            <a class="btn btn--discord" href="https://discord.gg/cU8tt3QsUp" target="_blank" rel="noopener">Discord beitreten</a>
+        </div>
+    </div>
+</section>
+
+<footer id="footer"></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>
+
