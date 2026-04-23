@@ -1180,9 +1180,9 @@ body.popup-open {
 }
 
 .role-status--open {
-    background: rgba(0, 200, 83, 0.15);
-    color: var(--accent);
-    border: 1px solid rgba(0, 200, 83, 0.35);
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.35);
 }
 
 .role-status--closed {
