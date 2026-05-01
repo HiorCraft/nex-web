@@ -16,6 +16,8 @@ document.getElementById("footer").innerHTML = `
       <h4>Navigation</h4>
       <ul>
         <li><a href="/Home">Startseite</a></li>
+        <li><a href="/News">News</a></li>
+        <li><a href="/Roadmap">Roadmap</a></li>
         <li><a href="/Mods">Mods</a></li>
         <li><a href="/Ranks">Ränge</a></li>
         <li><a href="/Craftunity">Team</a></li>
@@ -38,5 +40,6 @@ document.getElementById("footer").innerHTML = `
   <div class="footer-bottom">
     <p>© 2025 - 2026 Hexoria</p>
     <p class="footer-note">Teile dieser Website wurden mit Unterstützung von KI erstellt und anschließend manuell überarbeitet.</p>
+    <p class="footer-note">Not affiliated with Mojang Studios.</p>
   </div>
 `;

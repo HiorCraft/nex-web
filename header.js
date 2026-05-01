@@ -11,6 +11,7 @@ document.getElementById("header").innerHTML = `
         <nav>
             <a href="/Home" class="nav-link">Home</a>
             <a href="/News" class="nav-link">News</a>
+            <a href="/Roadmap" class="nav-link">Roadmap</a>
             <a href="/Ranks" class="nav-link">Ränge</a>
         </nav>
 

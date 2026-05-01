@@ -69,13 +69,13 @@
 <script src="../mods.js"></script>
 
 <script>
-  // Markiere aktiven Nav-Link
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === currentPage || link.textContent.trim().toLowerCase() === 'mods') {
-      link.classList.add("active");
-    }
-  });
+    // Markiere aktiven Nav-Link
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage || link.textContent.trim().toLowerCase() === 'mods') {
+            link.classList.add("active");
+        }
+    });
 </script>
 
 </body>
